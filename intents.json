@@ -1,0 +1,930 @@
+{
+    "intents": [
+            {
+                "tag": "saludo",
+                "patterns": ["Hola", "Hola EpiBot", "Buenos días", "Buenas tardes", "Buenas noches"],
+                "responses": ["¡Hola! ¿En qué puedo ayudarte hoy?", "¡Hola! Soy EpiBot, tu asistente para Ingeniería de Sistemas e Informática. ¿Qué necesitas saber?", "¡Hola! ¿Cómo puedo asistirte con tus cursos o docentes?"]
+            },
+            {
+                "tag": "despedida",
+                "patterns": ["Adiós", "Hasta luego", "Nos vemos", "Gracias, adiós"],
+                "responses": ["¡Hasta luego! Si necesitas más ayuda, estaré aquí.", "¡Adiós! Que tengas un buen día.", "¡Nos vemos pronto! No dudes en regresar si tienes más preguntas."]
+            },
+            {
+                "tag": "sin_respuesta",
+                "patterns": [],
+                "responses": ["Lo siento, no entiendo tu pregunta. ¿Puedes formularla de otra manera?", "No estoy seguro de cómo responder a eso. ¿Puedes intentar preguntarme algo más?", "No tengo la información que buscas en este momento. ¿Puedo ayudarte con otra cosa?"]
+            },
+            {
+                "tag": "curso_fundamentos_de_programacion",
+                "patterns": ["¿Qué es Fundamentos de Programación?", "Dime sobre Fundamentos de Programación", "Información sobre el curso Fundamentos de Programación"],
+                "responses": ["Fundamentos de Programación (IS-121) es un curso que introduce los principios básicos de la programación. Se enseñan conceptos como variables, estructuras de control, funciones y manejo de datos. Este curso tiene 4 créditos y se imparte en el primer ciclo."]
+            },
+            {
+                "tag": "curso_matematica_i",
+                "patterns": ["¿Qué es Matemática I?", "Dime sobre Matemática I", "Información sobre el curso Matemática I"],
+                "responses": ["Matemática I (IS-122) es un curso fundamental que cubre conceptos básicos de matemáticas necesarios para la ingeniería. Este curso tiene 4 créditos y se imparte en el primer ciclo."]
+            },
+            {
+                "tag": "curso_metodologia_y_tecnicas_de_estudio_universitario",
+                "patterns": ["¿Qué es Metodología y Técnicas de Estudio Universitario?", "Dime sobre Metodología y Técnicas de Estudio Universitario", "Información sobre el curso Metodología y Técnicas de Estudio Universitario"],
+                "responses": ["Metodología y Técnicas de Estudio Universitario (IS-123) es un curso que enseña técnicas y métodos para mejorar el estudio y el aprendizaje en el entorno universitario. Este curso tiene 3 créditos y se imparte en el primer ciclo."]
+            },
+            {
+                "tag": "curso_redaccion_y_comunicacion",
+                "patterns": ["¿Qué es Redacción y Comunicación?", "Dime sobre Redacción y Comunicación", "Información sobre el curso Redacción y Comunicación"],
+                "responses": ["Redacción y Comunicación (IS-124) es un curso que desarrolla habilidades de escritura y comunicación efectiva en el ámbito académico y profesional. Este curso tiene 3 créditos y se imparte en el primer ciclo."]
+            },
+            {
+                "tag": "curso_filosofia",
+                "patterns": ["¿Qué es Filosofía?", "Dime sobre Filosofía", "Información sobre el curso Filosofía"],
+                "responses": ["Filosofía (IS-125) es un curso que introduce a los estudiantes a los conceptos fundamentales de la filosofía y su aplicación en la vida cotidiana. Este curso tiene 3 créditos y se imparte en el primer ciclo."]
+            },
+            {
+                "tag": "curso_sociologia",
+                "patterns": ["¿Qué es Sociología?", "Dime sobre Sociología", "Información sobre el curso Sociología"],
+                "responses": ["Sociología (IS-126) es un curso que estudia las estructuras sociales y los procesos que las configuran, así como su impacto en la vida de las personas. Este curso tiene 3 créditos y se imparte en el primer ciclo."]
+            },
+            {
+                "tag": "curso_biologia_y_medio_ambiente",
+                "patterns": ["¿Qué es Biología y Medio Ambiente?", "Dime sobre Biología y Medio Ambiente", "Información sobre el curso Biología y Medio Ambiente"],
+                "responses": ["Biología y Medio Ambiente (IS-127) es un curso que aborda los principios básicos de la biología y la relación del ser humano con el medio ambiente. Este curso tiene 3 créditos y se imparte en el primer ciclo."]
+            },
+            {
+                "tag": "curso_estructura_de_datos",
+                "patterns": ["¿Qué es Estructura de Datos?", "Dime sobre Estructura de Datos", "Información sobre el curso Estructura de Datos"],
+                "responses": ["Estructura de Datos (IS-221) es un curso que cubre las estructuras de datos fundamentales y sus aplicaciones en la programación. Se requiere haber completado Fundamentos de Programación (IS-121). Este curso tiene 4 créditos y se imparte en el segundo ciclo."]
+            },
+            {
+                "tag": "curso_programacion_orientada_a_objetos_i",
+                "patterns": ["¿Qué es Programación Orientada a Objetos I?", "Dime sobre Programación Orientada a Objetos I", "Información sobre el curso Programación Orientada a Objetos I"],
+                "responses": ["Programación Orientada a Objetos I (IS-222) es un curso que introduce los conceptos y técnicas de la programación orientada a objetos. Se requiere haber completado Fundamentos de Programación (IS-121). Este curso tiene 3 créditos y se imparte en el segundo ciclo."]
+            },
+            {
+                "tag": "curso_algebra_lineal",
+                "patterns": ["¿Qué es Álgebra Lineal?", "Dime sobre Álgebra Lineal", "Información sobre el curso Álgebra Lineal"],
+                "responses": ["Álgebra Lineal (IS-223) es un curso que estudia las estructuras algebraicas y sus aplicaciones en la ingeniería y la informática. Se requiere haber completado Matemática I (IS-122). Este curso tiene 3 créditos y se imparte en el segundo ciclo."]
+            },
+            {
+                "tag": "curso_matematicas_discretas_i",
+                "patterns": ["¿Qué es Matemáticas Discretas I?", "Dime sobre Matemáticas Discretas I", "Información sobre el curso Matemáticas Discretas I"],
+                "responses": ["Matemáticas Discretas I (IS-224) es un curso que introduce los conceptos fundamentales de las matemáticas discretas, esenciales para la computación y la teoría de algoritmos. Este curso tiene 3 créditos y se imparte en el segundo ciclo."]
+            },
+            {
+                "tag": "curso_matematica_ii",
+                "patterns": ["¿Qué es Matemática II?", "Dime sobre Matemática II", "Información sobre el curso Matemática II"],
+                "responses": ["Matemática II (IS-225) es un curso avanzado que continúa los temas cubiertos en Matemática I, profundizando en técnicas y aplicaciones matemáticas. Se requiere haber completado Matemática I (IS-122). Este curso tiene 4 créditos y se imparte en el segundo ciclo."]
+            },
+            {
+                "tag": "curso_estadistica_descriptiva",
+                "patterns": ["¿Qué es Estadística Descriptiva?", "Dime sobre Estadística Descriptiva", "Información sobre el curso Estadística Descriptiva"],
+                "responses": ["Estadística Descriptiva (IS-226) es un curso que enseña métodos y técnicas para la recolección, análisis y presentación de datos. Este curso tiene 3 créditos y se imparte en el segundo ciclo."]
+            },
+            {
+                "tag": "curso_oratoria_y_liderazgo",
+                "patterns": ["¿Qué es Oratoria y Liderazgo?", "Dime sobre Oratoria y Liderazgo", "Información sobre el curso Oratoria y Liderazgo"],
+                "responses": ["Oratoria y Liderazgo (IS-228) es un curso que desarrolla habilidades de comunicación efectiva y liderazgo. Este curso tiene 2 créditos y se imparte en el segundo ciclo."]
+            },
+            {
+                "tag": "curso_analisis_y_diseno_de_algoritmos",
+                "patterns": ["¿Qué es Análisis y Diseño de Algoritmos?", "Dime sobre Análisis y Diseño de Algoritmos", "Información sobre el curso Análisis y Diseño de Algoritmos"],
+                "responses": ["Análisis y Diseño de Algoritmos (IS-321) es un curso que cubre técnicas avanzadas de análisis y diseño de algoritmos eficientes. Se requiere haber completado Estructura de Datos (IS-221). Este curso tiene 3 créditos y se imparte en el tercer ciclo."]
+            },
+            {
+                "tag": "curso_programacion_orientada_a_objetos_ii",
+                "patterns": ["¿Qué es Programación Orientada a Objetos II?", "Dime sobre Programación Orientada a Objetos II", "Información sobre el curso Programación Orientada a Objetos II"],
+                "responses": ["Programación Orientada a Objetos II (IS-322) es un curso avanzado que continúa con los conceptos de la programación orientada a objetos. Se requiere haber completado Programación Orientada a Objetos I (IS-222). Este curso tiene 3 créditos y se imparte en el tercer ciclo."]
+            },
+            {
+                "tag": "curso_fundamentos_de_sistemas_de_informacion",
+                "patterns": ["¿Qué es Fundamentos de Sistemas de Información?", "Dime sobre Fundamentos de Sistemas de Información", "Información sobre el curso Fundamentos de Sistemas de Información"],
+                "responses": ["Fundamentos de Sistemas de Información (IS-323) es un curso que introduce los principios básicos de los sistemas de información y su gestión. Este curso tiene 3 créditos y se imparte en el tercer ciclo."]
+            },
+            {
+                "tag": "curso_matematica_iii",
+                "patterns": ["¿Qué es Matemática III?", "Dime sobre Matemática III", "Información sobre el curso Matemática III"],
+                "responses": ["Matemática III (IS-324) es un curso avanzado que profundiza en técnicas matemáticas aplicadas en la ingeniería. Se requiere haber completado Matemática II (IS-225). Este curso tiene 4 créditos y se imparte en el tercer ciclo."]
+            },
+            {
+                "tag": "curso_matematicas_discretas_ii",
+                "patterns": ["¿Qué es Matemáticas Discretas II?", "Dime sobre Matemáticas Discretas II", "Información sobre el curso Matemáticas Discretas II"],
+                "responses": ["Matemáticas Discretas II (IS-325) es un curso avanzado que continúa los temas cubiertos en Matemáticas Discretas I. Se requiere haber completado Matemáticas Discretas I (IS-224). Este curso tiene 3 créditos y se imparte en el tercer ciclo."]
+            },
+            {
+                "tag": "curso_probabilidades",
+                "patterns": ["¿Qué es Probabilidades?", "Dime sobre Probabilidades", "Información sobre el curso Probabilidades"],
+                "responses": ["Probabilidades (IS-326) es un curso que estudia los conceptos fundamentales de la teoría de probabilidades y sus aplicaciones. Se requiere haber completado Álgebra Lineal (IS-223) y Matemática II (IS-225). Este curso tiene 3 créditos y se imparte en el tercer ciclo."]
+            },
+            {
+                "tag": "curso_fisica_electrica",
+                "patterns": ["¿Qué es Física Eléctrica?", "Dime sobre Física Eléctrica", "Información sobre el curso Física Eléctrica"],
+                "responses": ["Física Eléctrica (IS-327) es un curso que cubre los principios básicos de la electricidad y el magnetismo. Este curso tiene 3 créditos y se imparte en el tercer ciclo."]
+            },
+            {
+                "tag": "curso_algoritmos_paralelos",
+                "patterns": ["¿Qué es Algoritmos Paralelos?", "Dime sobre Algoritmos Paralelos", "Información sobre el curso Algoritmos Paralelos"],
+                "responses": ["Algoritmos Paralelos (IS-421) es un curso que estudia el diseño y la implementación de algoritmos que pueden ejecutarse en paralelo. Se requiere haber completado Análisis y Diseño de Algoritmos (IS-321). Este curso tiene 3 créditos y se imparte en el cuarto ciclo."]
+            },
+            {
+                "tag": "curso_analisis_y_diseno_de_sistemas_i",
+                "patterns": ["¿Qué es Análisis y Diseño de Sistemas I?", "Dime sobre Análisis y Diseño de Sistemas I", "Información sobre el curso Análisis y Diseño de Sistemas I"],
+                "responses": ["Análisis y Diseño de Sistemas I (IS-422) es un curso que introduce los principios y técnicas de análisis y diseño de sistemas de información. Este curso tiene 3 créditos y se imparte en el cuarto ciclo."]
+            },
+            {
+                "tag": "curso_base_de_datos_i",
+                "patterns": ["¿Qué es Base de Datos I?", "Dime sobre Base de Datos I", "Información sobre el curso Base de Datos I"],
+                "responses": ["Base de Datos I (IS-423) es un curso que cubre los principios fundamentales del diseño, implementación y gestión de bases de datos. Este curso tiene 3 créditos y se imparte en el cuarto ciclo."]
+            },
+            {
+                "tag": "curso_sistemas_operativos",
+                "patterns": ["¿Qué es Sistemas Operativos?", "Dime sobre Sistemas Operativos", "Información sobre el curso Sistemas Operativos"],
+                "responses": ["Sistemas Operativos (IS-424) es un curso que estudia los conceptos, estructuras y mecanismos de los sistemas operativos modernos. Este curso tiene 3 créditos y se imparte en el cuarto ciclo."]
+            },
+            {
+                "tag": "curso_matematica_iv",
+                "patterns": ["¿Qué es Matemática IV?", "Dime sobre Matemática IV", "Información sobre el curso Matemática IV"],
+                "responses": ["Matemática IV (IS-425) es un curso avanzado que continúa los temas cubiertos en Matemática III, con aplicaciones adicionales en ingeniería. Se requiere haber completado Matemática III (IS-324). Este curso tiene 4 créditos y se imparte en el cuarto ciclo."]
+            },
+            {
+                "tag": "curso_circuitos_electricos_y_electronicos",
+                "patterns": ["¿Qué es Circuitos Eléctricos y Electrónicos?", "Dime sobre Circuitos Eléctricos y Electrónicos", "Información sobre el curso Circuitos Eléctricos y Electrónicos"],
+                "responses": ["Circuitos Eléctricos y Electrónicos (IS-426) es un curso que cubre los principios y aplicaciones de los circuitos eléctricos y electrónicos. Este curso tiene 3 créditos y se imparte en el cuarto ciclo."]
+            },
+            {
+                "tag": "curso_investigacion_operativa_i",
+                "patterns": ["¿Qué es Investigación Operativa I?", "Dime sobre Investigación Operativa I", "Información sobre el curso Investigación Operativa I"],
+                "responses": ["Investigación Operativa I (IS-427) es un curso que introduce los métodos cuantitativos y técnicas para la toma de decisiones óptimas en la gestión de operaciones. Este curso tiene 3 créditos y se imparte en el cuarto ciclo."]
+            },
+            {
+                "tag": "curso_sistemas_distribuidos",
+                "patterns": ["¿Qué es Sistemas Distribuidos?", "Dime sobre Sistemas Distribuidos", "Información sobre el curso Sistemas Distribuidos"],
+                "responses": ["Sistemas Distribuidos (IS-521) es un curso que estudia los conceptos y técnicas para el diseño y la implementación de sistemas distribuidos. Se requiere haber completado Algoritmos Paralelos (IS-421). Este curso tiene 3 créditos y se imparte en el quinto ciclo."]
+            },
+            {
+                "tag": "curso_analisis_y_diseno_de_sistemas_ii",
+                "patterns": ["¿Qué es Análisis y Diseño de Sistemas II?", "Dime sobre Análisis y Diseño de Sistemas II", "Información sobre el curso Análisis y Diseño de Sistemas II"],
+                "responses": ["Análisis y Diseño de Sistemas II (IS-522) es un curso avanzado que continúa con los principios y técnicas de análisis y diseño de sistemas de información. Se requiere haber completado Análisis y Diseño de Sistemas I (IS-422). Este curso tiene 3 créditos y se imparte en el quinto ciclo."]
+            },
+            {
+                "tag": "curso_base_de_datos_ii",
+                "patterns": ["¿Qué es Base de Datos II?", "Dime sobre Base de Datos II", "Información sobre el curso Base de Datos II"],
+                "responses": ["Base de Datos II (IS-523) es un curso avanzado que profundiza en los principios y técnicas del diseño, implementación y gestión de bases de datos. Se requiere haber completado Base de Datos I (IS-423). Este curso tiene 3 créditos y se imparte en el quinto ciclo."]
+            },
+            {
+                "tag": "curso_aplicaciones_web_i",
+                "patterns": ["¿Qué es Aplicaciones Web I?", "Dime sobre Aplicaciones Web I", "Información sobre el curso Aplicaciones Web I"],
+                "responses": ["Aplicaciones Web I (IS-524) es un curso que introduce los conceptos y técnicas para el desarrollo de aplicaciones web. Este curso tiene 3 créditos y se imparte en el quinto ciclo."]
+            },
+            {
+                "tag": "curso_metodos_numericos",
+                "patterns": ["¿Qué es Métodos Numéricos?", "Dime sobre Métodos Numéricos", "Información sobre el curso Métodos Numéricos"],
+                "responses": ["Métodos Numéricos (IS-525) es un curso que estudia las técnicas para resolver problemas matemáticos mediante métodos numéricos. Se requiere haber completado Matemática IV (IS-425). Este curso tiene 3 créditos y se imparte en el quinto ciclo."]
+            },
+            {
+                "tag": "curso_sistemas_digitales",
+                "patterns": ["¿Qué es Sistemas Digitales?", "Dime sobre Sistemas Digitales", "Información sobre el curso Sistemas Digitales"],
+                "responses": ["Sistemas Digitales (IS-526) es un curso que cubre los principios y aplicaciones de los sistemas digitales. Se requiere haber completado Circuitos Eléctricos y Electrónicos (IS-426). Este curso tiene 3 créditos y se imparte en el quinto ciclo."]
+            },
+            {
+                "tag": "curso_investigacion_operativa_ii",
+                "patterns": ["¿Qué es Investigación Operativa II?", "Dime sobre Investigación Operativa II", "Información sobre el curso Investigación Operativa II"],
+                "responses": ["Investigación Operativa II (IS-527) es un curso avanzado que continúa con los métodos cuantitativos y técnicas para la toma de decisiones óptimas en la gestión de operaciones. Se requiere haber completado Investigación Operativa I (IS-427). Este curso tiene 3 créditos y se imparte en el quinto ciclo."]
+            },
+            {
+                "tag": "curso_ingenieria_de_software",
+                "patterns": ["¿Qué es Ingeniería de Software?", "Dime sobre Ingeniería de Software", "Información sobre el curso Ingeniería de Software"],
+                "responses": ["Ingeniería de Software (IS-621) es un curso que abarca los principios y prácticas para el desarrollo de software de alta calidad. Se requiere haber completado Análisis y Diseño de Sistemas II (IS-522) y Base de Datos II (IS-523). Este curso tiene 4 créditos y se imparte en el sexto ciclo."]
+            },
+            {
+                "tag": "curso_business_intelligence",
+                "patterns": ["¿Qué es Business Intelligence?", "Dime sobre Business Intelligence", "Información sobre el curso Business Intelligence"],
+                "responses": ["Business Intelligence (IS-622) es un curso que introduce las técnicas y herramientas para el análisis de datos y la toma de decisiones empresariales. Se requiere haber completado Base de Datos II (IS-523). Este curso tiene 4 créditos y se imparte en el sexto ciclo."]
+            },
+            {
+                "tag": "curso_programacion_de_dispositivos_moviles_i",
+                "patterns": ["¿Qué es Programación de Dispositivos Móviles I?", "Dime sobre Programación de Dispositivos Móviles I", "Información sobre el curso Programación de Dispositivos Móviles I"],
+                "responses": ["Programación de Dispositivos Móviles I (IS-623) es un curso que introduce los conceptos y técnicas para el desarrollo de aplicaciones móviles. Este curso tiene 3 créditos y se imparte en el sexto ciclo."]
+            },
+            {
+                "tag": "curso_aplicaciones_web_ii",
+                "patterns": ["¿Qué es Aplicaciones Web II?", "Dime sobre Aplicaciones Web II", "Información sobre el curso Aplicaciones Web II"],
+                "responses": ["Aplicaciones Web II (IS-624) es un curso avanzado que continúa con los conceptos y técnicas para el desarrollo de aplicaciones web. Se requiere haber completado Aplicaciones Web I (IS-524). Este curso tiene 3 créditos y se imparte en el sexto ciclo."]
+            },
+            {
+                "tag": "curso_realidad_aumentada",
+                "patterns": ["¿Qué es Realidad Aumentada?", "Dime sobre Realidad Aumentada", "Información sobre el curso Realidad Aumentada"],
+                "responses": ["Realidad Aumentada (IS-625) es un curso que introduce los conceptos y técnicas para el desarrollo de aplicaciones de realidad aumentada. Este curso tiene 3 créditos y se imparte en el sexto ciclo."]
+            },
+            {
+                "tag": "curso_arquitectura_de_computadoras",
+                "patterns": ["¿Qué es Arquitectura de Computadoras?", "Dime sobre Arquitectura de Computadoras", "Información sobre el curso Arquitectura de Computadoras"],
+                "responses": ["Arquitectura de Computadoras (IS-626) es un curso que estudia los principios y el diseño de la arquitectura de los computadores. Se requiere haber completado Sistemas Digitales (IS-526). Este curso tiene 3 créditos y se imparte en el sexto ciclo."]
+            },
+            {
+                "tag": "curso_data_mining",
+                "patterns": ["¿Qué es Data Mining?", "Dime sobre Data Mining", "Información sobre el curso Data Mining"],
+                "responses": ["Data Mining (IS-721) es un curso que introduce las técnicas y herramientas para el análisis y la extracción de patrones de grandes conjuntos de datos. Este curso tiene 4 créditos y se imparte en el séptimo ciclo."]
+            },
+            {
+                "tag": "curso_calidad_de_software",
+                "patterns": ["¿Qué es Calidad de Software?", "Dime sobre Calidad de Software", "Información sobre el curso Calidad de Software"],
+                "responses": ["Calidad de Software (IS-722) es un curso que cubre los principios y prácticas para asegurar la calidad en el desarrollo de software. Se requiere haber completado Ingeniería de Software (IS-621). Este curso tiene 4 créditos y se imparte en el séptimo ciclo."]
+            },
+            {
+                "tag": "curso_programacion_de_dispositivos_moviles_ii",
+                "patterns": ["¿Qué es Programación de Dispositivos Móviles II?", "Dime sobre Programación de Dispositivos Móviles II", "Información sobre el curso Programación de Dispositivos Móviles II"],
+                "responses": ["Programación de Dispositivos Móviles II (IS-723) es un curso avanzado que continúa con los conceptos y técnicas para el desarrollo de aplicaciones móviles. Se requiere haber completado Programación de Dispositivos Móviles I (IS-623). Este curso tiene 3 créditos y se imparte en el séptimo ciclo."]
+            },
+            {
+                "tag": "curso_programacion_de_video_juegos_i",
+                "patterns": ["¿Qué es Programación de Videojuegos I?", "Dime sobre Programación de Videojuegos I", "Información sobre el curso Programación de Videojuegos I"],
+                "responses": ["Programación de Videojuegos I (IS-724) es un curso que introduce los conceptos y técnicas para el desarrollo de videojuegos. Este curso tiene 3 créditos y se imparte en el séptimo ciclo."]
+            },
+            {
+                "tag": "curso_redes_i",
+                "patterns": ["¿Qué es Redes I?", "Dime sobre Redes I", "Información sobre el curso Redes I"],
+                "responses": ["Redes I (IS-725) es un curso que cubre los principios y tecnologías fundamentales de las redes de computadoras. Este curso tiene 3 créditos y se imparte en el séptimo ciclo."]
+            },
+            {
+                "tag": "curso_lenguaje_de_bajo_nivel",
+                "patterns": ["¿Qué es Lenguaje de Bajo Nivel?", "Dime sobre Lenguaje de Bajo Nivel", "Información sobre el curso Lenguaje de Bajo Nivel"],
+                "responses": ["Lenguaje de Bajo Nivel (IS-726) es un curso que estudia los conceptos y técnicas de programación a nivel de ensamblador y otros lenguajes de bajo nivel. Se requiere haber completado Arquitectura de Computadoras (IS-626). Este curso tiene 3 créditos y se imparte en el séptimo ciclo."]
+            },
+            {
+                "tag": "curso_cloud_computing",
+                "patterns": ["¿Qué es Cloud Computing?", "Dime sobre Cloud Computing", "Información sobre el curso Cloud Computing"],
+                "responses": ["Cloud Computing (IS-821) es un curso que introduce los conceptos y tecnologías para la computación en la nube. Se requiere haber completado Data Mining (IS-721). Este curso tiene 3 créditos y se imparte en el octavo ciclo."]
+            },
+            {
+                "tag": "curso_procesamiento_de_imagenes_y_videos",
+                "patterns": ["¿Qué es Procesamiento de Imágenes y Videos?", "Dime sobre Procesamiento de Imágenes y Videos", "Información sobre el curso Procesamiento de Imágenes y Videos"],
+                "responses": ["Procesamiento de Imágenes y Videos (IS-822) es un curso que cubre las técnicas y algoritmos para el análisis y la manipulación de imágenes y videos digitales. Este curso tiene 4 créditos y se imparte en el octavo ciclo."]
+            },
+            {
+                "tag": "curso_proyecto_de_investigacion_i",
+                "patterns": ["¿Qué es Proyecto de Investigación I?", "Dime sobre Proyecto de Investigación I", "Información sobre el curso Proyecto de Investigación I"],
+                "responses": ["Proyecto de Investigación I (IS-823) es un curso que guía a los estudiantes en el desarrollo de un proyecto de investigación en el área de la informática. Este curso tiene 3 créditos y se imparte en el octavo ciclo."]
+            },
+            {
+                "tag": "curso_programacion_de_video_juegos_ii",
+                "patterns": ["¿Qué es Programación de Videojuegos II?", "Dime sobre Programación de Videojuegos II", "Información sobre el curso Programación de Videojuegos II"],
+                "responses": ["Programación de Videojuegos II (IS-824) es un curso avanzado que continúa con los conceptos y técnicas para el desarrollo de videojuegos. Se requiere haber completado Programación de Videojuegos I (IS-724). Este curso tiene 3 créditos y se imparte en el octavo ciclo."]
+            },
+            {
+                "tag": "curso_interaccion_humano_computador",
+                "patterns": ["¿Qué es Interacción Humano Computador?", "Dime sobre Interacción Humano Computador", "Información sobre el curso Interacción Humano Computador"],
+                "responses": ["Interacción Humano Computador (IS-825) es un curso que estudia los principios y técnicas para el diseño de interfaces de usuario eficientes y efectivas. Este curso tiene 3 créditos y se imparte en el octavo ciclo."]
+            },
+            {
+                "tag": "curso_redes_ii",
+                "patterns": ["¿Qué es Redes II?", "Dime sobre Redes II", "Información sobre el curso Redes II"],
+                "responses": ["Redes II (IS-826) es un curso avanzado que continúa con los principios y tecnologías de las redes de computadoras. Se requiere haber completado Redes I (IS-725). Este curso tiene 3 créditos y se imparte en el octavo ciclo."]
+            },
+            {
+                "tag": "curso_robotica_i",
+                "patterns": ["¿Qué es Robótica I?", "Dime sobre Robótica I", "Información sobre el curso Robótica I"],
+                "responses": ["Robótica I (IS-827) es un curso que introduce los conceptos y técnicas para el diseño y la programación de sistemas robóticos. Este curso tiene 3 créditos y se imparte en el octavo ciclo."]
+            },
+            {
+                "tag": "curso_inteligencia_artificial_i",
+                "patterns": ["¿Qué es Inteligencia Artificial I?", "Dime sobre Inteligencia Artificial I", "Información sobre el curso Inteligencia Artificial I"],
+                "responses": ["Inteligencia Artificial I (IS-921) es un curso que introduce los principios y técnicas de la inteligencia artificial. Se requiere haber completado Procesamiento de Imágenes y Videos (IS-822). Este curso tiene 3 créditos y se imparte en el noveno ciclo."]
+            },
+            {
+                "tag": "curso_seguridad_informatica",
+                "patterns": ["¿Qué es Seguridad Informática?", "Dime sobre Seguridad Informática", "Información sobre el curso Seguridad Informática"],
+                "responses": ["Seguridad Informática (IS-922) es un curso que cubre los principios y prácticas para asegurar la integridad, confidencialidad y disponibilidad de la información. Este curso tiene 3 créditos y se imparte en el noveno ciclo."]
+            },
+            {
+                "tag": "curso_proyecto_de_investigacion_ii",
+                "patterns": ["¿Qué es Proyecto de Investigación II?", "Dime sobre Proyecto de Investigación II", "Información sobre el curso Proyecto de Investigación II"],
+                "responses": ["Proyecto de Investigación II (IS-923) es un curso que guía a los estudiantes en la continuación y finalización de un proyecto de investigación en el área de la informática. Se requiere haber completado Proyecto de Investigación I (IS-823). Este curso tiene 3 créditos y se imparte en el noveno ciclo."]
+            },
+            {
+                "tag": "curso_formacion_de_empresas_con_base_tecnologica",
+                "patterns": ["¿Qué es Formación de Empresas con Base Tecnológica?", "Dime sobre Formación de Empresas con Base Tecnológica", "Información sobre el curso Formación de Empresas con Base Tecnológica"],
+                "responses": ["Formación de Empresas con Base Tecnológica (IS-924) es un curso que cubre los principios y prácticas para la creación y gestión de empresas basadas en tecnologías innovadoras. Este curso tiene 3 créditos y se imparte en el noveno ciclo."]
+            },
+            {
+                "tag": "curso_gestion_de_proyectos_i",
+                "patterns": ["¿Qué es Gestión de Proyectos I?", "Dime sobre Gestión de Proyectos I", "Información sobre el curso Gestión de Proyectos I"],
+                "responses": ["Gestión de Proyectos I (IS-925) es un curso que introduce los conceptos y técnicas para la gestión efectiva de proyectos. Este curso tiene 3 créditos y se imparte en el noveno ciclo."]
+            },
+            {
+                "tag": "curso_robotica_ii",
+                "patterns": ["¿Qué es Robótica II?", "Dime sobre Robótica II", "Información sobre el curso Robótica II"],
+                "responses": ["Robótica II (IS-926) es un curso avanzado que continúa con los conceptos y técnicas para el diseño y la programación de sistemas robóticos. Se requiere haber completado Robótica I (IS-827). Este curso tiene 3 créditos y se imparte en el noveno ciclo."]
+            },
+            {
+                "tag": "curso_inteligencia_artificial_ii",
+                "patterns": ["¿Qué es Inteligencia Artificial II?", "Dime sobre Inteligencia Artificial II", "Información sobre el curso Inteligencia Artificial II"],
+                "responses": ["Inteligencia Artificial II (IS-1021) es un curso avanzado que continúa con los principios y técnicas de la inteligencia artificial. Se requiere haber completado Inteligencia Artificial I (IS-921). Este curso tiene 3 créditos y se imparte en el décimo ciclo."]
+            },
+            {
+                "tag": "curso_auditoria_de_sistemas_de_informacion",
+                "patterns": ["¿Qué es Auditoría de Sistemas de Información?", "Dime sobre Auditoría de Sistemas de Información", "Información sobre el curso Auditoría de Sistemas de Información"],
+                "responses": ["Auditoría de Sistemas de Información (IS-1022) es un curso que cubre los principios y prácticas de la auditoría de sistemas de información para asegurar su conformidad y eficiencia. Se requiere haber completado Seguridad Informática (IS-922). Este curso tiene 4 créditos y se imparte en el décimo ciclo."]
+            },
+            {
+                "tag": "curso_seguridad_de_la_informacion",
+                "patterns": ["¿Qué es Seguridad de la Información?", "Dime sobre Seguridad de la Información", "Información sobre el curso Seguridad de la Información"],
+                "responses": ["Seguridad de la Información (IS-1023) es un curso avanzado que profundiza en los métodos y técnicas para proteger la información contra diversas amenazas. Se requiere haber completado Seguridad Informática (IS-922). Este curso tiene 3 créditos y se imparte en el décimo ciclo."]
+            },
+            {
+                "tag": "curso_seminario_de_tesis",
+                "patterns": ["¿Qué es Seminario de Tesis?", "Dime sobre Seminario de Tesis", "Información sobre el curso Seminario de Tesis"],
+                "responses": ["Seminario de Tesis (IS-1024) es un curso que guía a los estudiantes en la elaboración y defensa de su tesis de grado. Se requiere haber completado Proyecto de Investigación II (IS-923). Este curso tiene 3 créditos y se imparte en el décimo ciclo."]
+            },
+            {
+                "tag": "curso_gestion_de_proyectos_ii",
+                "patterns": ["¿Qué es Gestión de Proyectos II?", "Dime sobre Gestión de Proyectos II", "Información sobre el curso Gestión de Proyectos II"],
+                "responses": ["Gestión de Proyectos II (IS-1026) es un curso avanzado que continúa con los conceptos y técnicas para la gestión efectiva de proyectos. Se requiere haber completado Gestión de Proyectos I (IS-925). Este curso tiene 3 créditos y se imparte en el décimo ciclo."]
+            },
+            {
+                "tag": "curso_topicos_avanzados_i",
+                "patterns": ["¿Qué es Tópicos Avanzados I?", "Dime sobre Tópicos Avanzados I", "Información sobre el curso Tópicos Avanzados I"],
+                "responses": ["Tópicos Avanzados I (IS-927) es un curso electivo que cubre temas avanzados en el campo de la informática y las tecnologías de la información. Este curso tiene 3 créditos y se imparte en el noveno ciclo."]
+            },
+            {
+                "tag": "curso_planeamiento_estrategico_de_sistemas_de_informacion",
+                "patterns": ["¿Qué es Planeamiento Estratégico de Sistemas de Información?", "Dime sobre Planeamiento Estratégico de Sistemas de Información", "Información sobre el curso Planeamiento Estratégico de Sistemas de Información"],
+                "responses": ["Planeamiento Estratégico de Sistemas de Información (IS-928) es un curso electivo que aborda las estrategias para la planificación y gestión de los sistemas de información en las organizaciones. Este curso tiene 3 créditos y se imparte en el noveno ciclo."]
+            },
+            {
+                "tag": "curso_topicos_avanzados_ii",
+                "patterns": ["¿Qué es Tópicos Avanzados II?", "Dime sobre Tópicos Avanzados II", "Información sobre el curso Tópicos Avanzados II"],
+                "responses": ["Tópicos Avanzados II (IS-1025) es un curso electivo que continúa con temas avanzados en el campo de la informática y las tecnologías de la información. Este curso tiene 4 créditos y se imparte en el décimo ciclo."]
+            },
+            {
+                "tag": "curso_planeamiento_estrategico_de_tecnologias_de_informacion",
+                "patterns": ["¿Qué es Planeamiento Estratégico de Tecnologías de Información?", "Dime sobre Planeamiento Estratégico de Tecnologías de Información", "Información sobre el curso Planeamiento Estratégico de Tecnologías de Información"],
+                "responses": ["Planeamiento Estratégico de Tecnologías de Información (IS-1027) es un curso electivo que trata sobre las estrategias para la planificación y gestión de las tecnologías de información en las organizaciones. Este curso tiene 4 créditos y se imparte en el décimo ciclo."]
+            },
+            {
+                "tag": "cursos_primer_ciclo",
+                "patterns": ["¿Qué cursos se llevan en el primer ciclo?", "Dime los cursos del primer ciclo", "¿Qué materias se llevan en el primer ciclo?"],
+                "responses": [
+                    "Los cursos del primer ciclo son:\n- Fundamentos de Programación (IS-121) - 4 créditos\n- Matemática I (IS-122) - 4 créditos\n- Metodología y Técnicas de Estudio Universitario (IS-123) - 3 créditos\n- Redacción y Comunicación (IS-124) - 3 créditos\n- Filosofía (IS-125) - 3 créditos\n- Sociología (IS-126) - 3 créditos\n- Biología y Medio Ambiente (IS-127) - 3 créditos"
+                ]
+            },
+            {
+                "tag": "cursos_segundo_ciclo",
+                "patterns": ["¿Qué cursos se llevan en el segundo ciclo?", "Dime los cursos del segundo ciclo", "¿Qué materias se llevan en el segundo ciclo?"],
+                "responses": [
+                    "Los cursos del segundo ciclo son:\n- Estructura de Datos (IS-221) - 4 créditos\n- Programación Orientada a Objetos I (IS-222) - 3 créditos\n- Álgebra Lineal (IS-223) - 3 créditos\n- Matemáticas Discretas I (IS-224) - 3 créditos\n- Matemática II (IS-225) - 4 créditos\n- Estadística Descriptiva (IS-226) - 3 créditos\n- Oratoria y Liderazgo (IS-228) - 2 créditos"
+                ]
+            },
+            {
+                "tag": "cursos_tercer_ciclo",
+                "patterns": ["¿Qué cursos se llevan en el tercer ciclo?", "Dime los cursos del tercer ciclo", "¿Qué materias se llevan en el tercer ciclo?"],
+                "responses": [
+                    "Los cursos del tercer ciclo son:\n- Análisis y Diseño de Algoritmos (IS-321) - 3 créditos\n- Programación Orientada a Objetos II (IS-322) - 3 créditos\n- Fundamentos de Sistemas de Información (IS-323) - 3 créditos\n- Matemática III (IS-324) - 4 créditos\n- Matemáticas Discretas II (IS-325) - 3 créditos\n- Probabilidades (IS-326) - 3 créditos\n- Física Eléctrica (IS-327) - 3 créditos"
+                ]
+            },
+            {
+                "tag": "cursos_cuarto_ciclo",
+                "patterns": ["¿Qué cursos se llevan en el cuarto ciclo?", "Dime los cursos del cuarto ciclo", "¿Qué materias se llevan en el cuarto ciclo?"],
+                "responses": [
+                    "Los cursos del cuarto ciclo son:\n- Algoritmos Paralelos (IS-421) - 3 créditos\n- Análisis y Diseño de Sistemas I (IS-422) - 3 créditos\n- Base de Datos I (IS-423) - 3 créditos\n- Sistemas Operativos (IS-424) - 3 créditos\n- Matemática IV (IS-425) - 4 créditos\n- Circuitos Eléctricos y Electrónicos (IS-426) - 3 créditos\n- Investigación Operativa I (IS-427) - 3 créditos"
+                ]
+            },
+            {
+                "tag": "cursos_quinto_ciclo",
+                "patterns": ["¿Qué cursos se llevan en el quinto ciclo?", "Dime los cursos del quinto ciclo", "¿Qué materias se llevan en el quinto ciclo?"],
+                "responses": [
+                    "Los cursos del quinto ciclo son:\n- Sistemas Distribuidos (IS-521) - 3 créditos\n- Análisis y Diseño de Sistemas II (IS-522) - 3 créditos\n- Base de Datos II (IS-523) - 3 créditos\n- Aplicaciones Web I (IS-524) - 3 créditos\n- Métodos Numéricos (IS-525) - 3 créditos\n- Sistemas Digitales (IS-526) - 3 créditos\n- Investigación Operativa II (IS-527) - 3 créditos"
+                ]
+            },
+            {
+                "tag": "cursos_sexto_ciclo",
+                "patterns": ["¿Qué cursos se llevan en el sexto ciclo?", "Dime los cursos del sexto ciclo", "¿Qué materias se llevan en el sexto ciclo?"],
+                "responses": [
+                    "Los cursos del sexto ciclo son:\n- Ingeniería de Software (IS-621) - 4 créditos\n- Business Intelligence (IS-622) - 4 créditos\n- Programación de Dispositivos Móviles I (IS-623) - 3 créditos\n- Aplicaciones Web II (IS-624) - 3 créditos\n- Realidad Aumentada (IS-625) - 3 créditos\n- Arquitectura de Computadoras (IS-626) - 3 créditos"
+                ]
+            },
+            {
+                "tag": "cursos_septimo_ciclo",
+                "patterns": ["¿Qué cursos se llevan en el séptimo ciclo?", "Dime los cursos del séptimo ciclo", "¿Qué materias se llevan en el séptimo ciclo?"],
+                "responses": [
+                    "Los cursos del séptimo ciclo son:\n- Data Mining (IS-721) - 4 créditos\n- Calidad de Software (IS-722) - 4 créditos\n- Programación de Dispositivos Móviles II (IS-723) - 3 créditos\n- Programación de Videojuegos I (IS-724) - 3 créditos\n- Redes I (IS-725) - 3 créditos\n- Lenguaje de Bajo Nivel (IS-726) - 3 créditos"
+                ]
+            },
+            {
+                "tag": "cursos_octavo_ciclo",
+                "patterns": ["¿Qué cursos se llevan en el octavo ciclo?", "Dime los cursos del octavo ciclo", "¿Qué materias se llevan en el octavo ciclo?"],
+                "responses": [
+                    "Los cursos del octavo ciclo son:\n- Cloud Computing (IS-821) - 3 créditos\n- Procesamiento de Imágenes y Videos (IS-822) - 4 créditos\n- Proyecto de Investigación I (IS-823) - 3 créditos\n- Programación de Videojuegos II (IS-824) - 3 créditos\n- Interacción Humano Computador (IS-825) - 3 créditos\n- Redes II (IS-826) - 3 créditos\n- Robótica I (IS-827) - 3 créditos"
+                ]
+            },
+            {
+                "tag": "cursos_noveno_ciclo",
+                "patterns": ["¿Qué cursos se llevan en el noveno ciclo?", "Dime los cursos del noveno ciclo", "¿Qué materias se llevan en el noveno ciclo?"],
+                "responses": [
+                    "Los cursos del noveno ciclo son:\n- Inteligencia Artificial I (IS-921) - 3 créditos\n- Seguridad Informática (IS-922) - 3 créditos\n- Proyecto de Investigación II (IS-923) - 3 créditos\n- Formación de Empresas con Base Tecnológica (IS-924) - 3 créditos\n- Gestión de Proyectos I (IS-925) - 3 créditos\n- Robótica II (IS-926) - 3 créditos"
+                ]
+            },
+            {
+                "tag": "cursos_decimo_ciclo",
+                "patterns": ["¿Qué cursos se llevan en el décimo ciclo?", "Dime los cursos del décimo ciclo", "¿Qué materias se llevan en el décimo ciclo?"],
+                "responses": [
+                    "Los cursos del décimo ciclo son:\n- Inteligencia Artificial II (IS-1021) - 3 créditos\n- Auditoría de Sistemas de Información (IS-1022) - 4 créditos\n- Seguridad de la Información (IS-1023) - 3 créditos\n- Seminario de Tesis (IS-1024) - 3 créditos\n- Gestión de Proyectos II (IS-1026) - 3 créditos"
+                ]
+            },
+            {
+                "tag": "cursos_electivos",
+                "patterns": ["¿Qué cursos se pueden llevar como electivo?", "Dime los cursos electivos", "¿Qué materias se pueden llevar como electivo?"],
+                "responses": [
+                    "Los cursos electivos disponibles son:\n- Electivo I: Tópicos Avanzados I (IS-927) - 3 créditos (noveno ciclo)\n- Electivo I: Planeamiento Estratégico de Sistemas de Información (IS-928) - 3 créditos (noveno ciclo)\n- Electivo II: Tópicos Avanzados II (IS-1025) - 4 créditos (décimo ciclo)\n- Electivo II: Planeamiento Estratégico de Tecnologías de Información (IS-1027) - 4 créditos (décimo ciclo)"
+                ]
+            },
+
+            {
+                "tag": "docente_alex_peter_zuniga_incalla",
+                "patterns": ["¿Quién es Alex Peter Zúñiga Incalla?", "Dime sobre Alex Peter Zúñiga Incalla", "Información sobre el profesor Alex Peter Zúñiga Incalla"],
+                "responses": ["Alex Peter Zúñiga Incalla es un docente nombrado en la Escuela Profesional de Ingeniería de Sistemas e Informática, especializado en Ingeniería de Sistemas."]
+            },
+            {
+                "tag": "docente_carlos_alberto_silva_delgado",
+                "patterns": ["¿Quién es Carlos Alberto Silva Delgado?", "Dime sobre Carlos Alberto Silva Delgado", "Información sobre el profesor Carlos Alberto Silva Delgado"],
+                "responses": ["Carlos Alberto Silva Delgado es un docente nombrado en la Escuela Profesional de Ingeniería de Sistemas e Informática, especializado en Ingeniería de Sistemas."]
+            },
+            {
+                "tag": "docente_hugo_euler_tito_chura",
+                "patterns": ["¿Quién es Hugo Euler Tito Chura?", "Dime sobre Hugo Euler Tito Chura", "Información sobre el profesor Hugo Euler Tito Chura"],
+                "responses": ["Hugo Euler Tito Chura es un docente nombrado en la Escuela Profesional de Ingeniería de Sistemas e Informática, especializado en Ingeniería de Sistemas."]
+            },
+            {
+                "tag": "docente_jose_antonio_guzman_valdivia",
+                "patterns": ["¿Quién es Jose Antonio Guzman Valdivia?", "Dime sobre Jose Antonio Guzman Valdivia", "Información sobre el profesor Jose Antonio Guzman Valdivia"],
+                "responses": ["Jose Antonio Guzman Valdivia es un docente nombrado en la Escuela Profesional de Ingeniería de Sistemas e Informática, especializado en Ingeniería de Sistemas."]
+            },
+            {
+                "tag": "docente_juan_carlos_clares_perca",
+                "patterns": ["¿Quién es Juan Carlos Clares Perca?", "Dime sobre Juan Carlos Clares Perca", "Información sobre el profesor Juan Carlos Clares Perca"],
+                "responses": ["Juan Carlos Clares Perca es un docente nombrado en la Escuela Profesional de Ingeniería de Sistemas e Informática, especializado en Ingeniería de Sistemas."]
+            },
+            {
+                "tag": "docente_maribel_estela_coaguila_mamani",
+                "patterns": ["¿Quién es Maribel Estela Coaguila Mamani?", "Dime sobre Maribel Estela Coaguila Mamani", "Información sobre la profesora Maribel Estela Coaguila Mamani"],
+                "responses": ["Maribel Estela Coaguila Mamani es una docente nombrada en la Escuela Profesional de Ingeniería de Sistemas e Informática, especializada en Ingeniería de Sistemas."]
+            },
+            {
+                "tag": "docente_mario_gauna_chino",
+                "patterns": ["¿Quién es Mario Gauna Chino?", "Dime sobre Mario Gauna Chino", "Información sobre el profesor Mario Gauna Chino"],
+                "responses": ["Mario Gauna Chino es un docente nombrado en la Escuela Profesional de Ingeniería de Sistemas e Informática, especializado en Ingeniería de Sistemas."]
+            },
+            {
+                "tag": "docente_oscar_john_vera_ramirez",
+                "patterns": ["¿Quién es Oscar John Vera Ramirez?", "Dime sobre Oscar John Vera Ramirez", "Información sobre el profesor Oscar John Vera Ramirez"],
+                "responses": ["Oscar John Vera Ramirez es un docente nombrado en la Escuela Profesional de Ingeniería de Sistemas e Informática, especializado en Ingeniería de Sistemas."]
+            },
+            {
+                "tag": "docente_ruso_alexander_morales_gonzales",
+                "patterns": ["¿Quién es Ruso Alexander Morales Gonzales?", "Dime sobre Ruso Alexander Morales Gonzales", "Información sobre el profesor Ruso Alexander Morales Gonzales"],
+                "responses": ["Ruso Alexander Morales Gonzales es un docente nombrado en la Escuela Profesional de Ingeniería de Sistemas e Informática, especializado en Ingeniería de Sistemas."]
+            },
+            {
+                "tag": "docente_salomon_rey_ramos_rivera",
+                "patterns": ["¿Quién es Salomon Rey Ramos Rivera?", "Dime sobre Salomon Rey Ramos Rivera", "Información sobre el profesor Salomon Rey Ramos Rivera"],
+                "responses": ["Salomon Rey Ramos Rivera es un docente nombrado en la Escuela Profesional de Ingeniería de Sistemas e Informática, especializado en Ciencias Básicas."]
+            },
+            {
+                "tag": "docente_saúl_huaquipaco_encinas",
+                "patterns": ["¿Quién es Saúl Huaquipaco Encinas?", "Dime sobre Saúl Huaquipaco Encinas", "Información sobre el profesor Saúl Huaquipaco Encinas"],
+                "responses": ["Saúl Huaquipaco Encinas es un docente nombrado en la Escuela Profesional de Ingeniería de Sistemas e Informática, especializado en Ingeniería de Sistemas."]
+            },
+            {
+                "tag": "docente_victor_yana_mamani",
+                "patterns": ["¿Quién es Victor Yana Mamani?", "Dime sobre Victor Yana Mamani", "Información sobre el profesor Victor Yana Mamani"],
+                "responses": ["Victor Yana Mamani es un docente nombrado en la Escuela Profesional de Ingeniería de Sistemas e Informática, especializado en Ingeniería de Sistemas."]
+            },
+            {
+                "tag": "docente_wildon_rojas_paucar",
+                "patterns": ["¿Quién es Wildon Rojas Paucar?", "Dime sobre Wildon Rojas Paucar", "Información sobre el profesor Wildon Rojas Paucar"],
+                "responses": ["Wildon Rojas Paucar es un docente nombrado en la Escuela Profesional de Ingeniería de Sistemas e Informática, especializado en Ingeniería de Sistemas."]
+            },
+            {
+                "tag": "docente_alberto_limache_flores",
+                "patterns": ["¿Quién es Alberto Limache Flores?", "Dime sobre Alberto Limache Flores", "Información sobre el profesor Alberto Limache Flores"],
+                "responses": ["Alberto Limache Flores es un docente contratado en la Escuela Profesional de Ingeniería de Sistemas e Informática, especializado en Ingeniería de Sistemas."]
+            },
+            {
+                "tag": "docente_armando_ruelas_alfaro",
+                "patterns": ["¿Quién es Armando Ruelas Alfaro?", "Dime sobre Armando Ruelas Alfaro", "Información sobre el profesor Armando Ruelas Alfaro"],
+                "responses": ["Armando Ruelas Alfaro es un docente contratado en la Escuela Profesional de Ingeniería de Sistemas e Informática, especializado en Ingeniería de Sistemas."]
+            },
+            {
+                "tag": "docente_arnulfo_andre_medina_villegas",
+                "patterns": ["¿Quién es Arnulfo Andre Medina Villegas?", "Dime sobre Arnulfo Andre Medina Villegas", "Información sobre el profesor Arnulfo Andre Medina Villegas"],
+                "responses": ["Arnulfo Andre Medina Villegas es un docente contratado en la Escuela Profesional de Ingeniería de Sistemas e Informática, especializado en Ciencias Básicas."]
+            },
+            {
+                "tag": "docente_arnulfo_julian_teodoro_medina_aguirre",
+                "patterns": ["¿Quién es Arnulfo Julian Teodoro Medina Aguirre?", "Dime sobre Arnulfo Julian Teodoro Medina Aguirre", "Información sobre el profesor Arnulfo Julian Teodoro Medina Aguirre"],
+                "responses": ["Arnulfo Julian Teodoro Medina Aguirre es un docente contratado en la Escuela Profesional de Ingeniería de Sistemas e Informática, especializado en Ciencias Básicas."]
+            },
+            {
+                "tag": "docente_arsenia_rita_arocutipa_lunasco",
+                "patterns": ["¿Quién es Arsenia Rita Arocutipa Lunasco?", "Dime sobre Arsenia Rita Arocutipa Lunasco", "Información sobre la profesora Arsenia Rita Arocutipa Lunasco"],
+                "responses": ["Arsenia Rita Arocutipa Lunasco es una docente contratada en la Escuela Profesional de Ingeniería de Sistemas e Informática, especializada en Ciencias Sociales."]
+            },
+            {
+                "tag": "docente_clara_nely_campos_quiroz",
+                "patterns": ["¿Quién es Clara Nely Campos Quiróz?", "Dime sobre Clara Nely Campos Quiróz", "Información sobre la profesora Clara Nely Campos Quiróz"],
+                "responses": ["Clara Nely Campos Quiróz es una docente contratada en la Escuela Profesional de Ingeniería de Sistemas e Informática, especializada en Ciencias Básicas."]
+            },
+            {
+                "tag": "docente_dina_elisa_leon_marin",
+                "patterns": ["¿Quién es Dina Elisa Leon Marín?", "Dime sobre Dina Elisa Leon Marín", "Información sobre la profesora Dina Elisa Leon Marín"],
+                "responses": ["Dina Elisa Leon Marín es una docente contratada en la Escuela Profesional de Ingeniería de Sistemas e Informática, especializada en Ingeniería de Sistemas."]
+            },
+            {
+                "tag": "docente_edgar_joselito_francia_candiotti",
+                "patterns": ["¿Quién es Edgar Joselito Francia Candiotti?", "Dime sobre Edgar Joselito Francia Candiotti", "Información sobre el profesor Edgar Joselito Francia Candiotti"],
+                "responses": ["Edgar Joselito Francia Candiotti es un docente contratado en la Escuela Profesional de Ingeniería de Sistemas e Informática, especializado en Ingeniería de Sistemas."]
+            },
+            {
+                "tag": "docente_edson_buenaventura_huertas_flores",
+                "patterns": ["¿Quién es Edson Buenaventura Huertas Flores?", "Dime sobre Edson Buenaventura Huertas Flores", "Información sobre el profesor Edson Buenaventura Huertas Flores"],
+                "responses": ["Edson Buenaventura Huertas Flores es un docente contratado en la Escuela Profesional de Ingeniería de Sistemas e Informática, especializado en Ingeniería de Sistemas."]
+            },
+            {
+                "tag": "docente_elva_roma_revilla_liu",
+                "patterns": ["¿Quién es Elva Roma Revilla Liu?", "Dime sobre Elva Roma Revilla Liu", "Información sobre la profesora Elva Roma Revilla Liu"],
+                "responses": ["Elva Roma Revilla Liu es una docente contratada en la Escuela Profesional de Ingeniería de Sistemas e Informática, especializada en Ciencias Sociales."]
+            },
+            {
+                "tag": "docente_felix_ricardo_perez_puertas",
+                "patterns": ["¿Quién es Felix Ricardo Perez Puertas?", "Dime sobre Felix Ricardo Perez Puertas", "Información sobre el profesor Felix Ricardo Perez Puertas"],
+                "responses": ["Felix Ricardo Perez Puertas es un docente contratado en la Escuela Profesional de Ingeniería de Sistemas e Informática, especializado en Ciencias Básicas."]
+            },
+            {
+                "tag": "docente_flor_de_maria_flores_torres",
+                "patterns": ["¿Quién es Flor de Maria Flores Torres?", "Dime sobre Flor de Maria Flores Torres", "Información sobre la profesora Flor de Maria Flores Torres"],
+                "responses": ["Flor de Maria Flores Torres es una docente contratada en la Escuela Profesional de Ingeniería de Sistemas e Informática, especializada en Ingeniería de Sistemas."]
+            },
+            {
+                "tag": "docente_hansi_elorrieta_rondon",
+                "patterns": ["¿Quién es Hansi Elorrieta Rondon?", "Dime sobre Hansi Elorrieta Rondon", "Información sobre el profesor Hansi Elorrieta Rondon"],
+                "responses": ["Hansi Elorrieta Rondon es un docente contratado en la Escuela Profesional de Ingeniería de Sistemas e Informática, especializado en Ingeniería de Sistemas."]
+            },
+            {
+                "tag": "docente_henry_nilton_muñoz_yanez",
+                "patterns": ["¿Quién es Henry Nilton Muñoz Yañez?", "Dime sobre Henry Nilton Muñoz Yañez", "Información sobre el profesor Henry Nilton Muñoz Yañez"],
+                "responses": ["Henry Nilton Muñoz Yañez es un docente contratado en la Escuela Profesional de Ingeniería de Sistemas e Informática, especializado en Ciencias Sociales."]
+            },
+            {
+                "tag": "docente_honorio_apaza_alanoca",
+                "patterns": ["¿Quién es Honorio Apaza Alanoca?", "Dime sobre Honorio Apaza Alanoca", "Información sobre el profesor Honorio Apaza Alanoca"],
+                "responses": ["Honorio Apaza Alanoca es un docente contratado en la Escuela Profesional de Ingeniería de Sistemas e Informática, especializado en Ingeniería de Sistemas."]
+            },
+            {
+                "tag": "docente_juan_carlos_valero_gomez",
+                "patterns": ["¿Quién es Juan Carlos Valero Gomez?", "Dime sobre Juan Carlos Valero Gomez", "Información sobre el profesor Juan Carlos Valero Gomez"],
+                "responses": ["Juan Carlos Valero Gomez es un docente contratado en la Escuela Profesional de Ingeniería de Sistemas e Informática, especializado en Ingeniería de Sistemas."]
+            },
+            {
+                "tag": "docente_juana_alejandrina_rojas_benites",
+                "patterns": ["¿Quién es Juana Alejandrina Rojas Benites?", "Dime sobre Juana Alejandrina Rojas Benites", "Información sobre la profesora Juana Alejandrina Rojas Benites"],
+                "responses": ["Juana Alejandrina Rojas Benites es una docente contratada en la Escuela Profesional de Ingeniería de Sistemas e Informática, especializada en Ciencias Sociales."]
+            },
+            {
+                "tag": "docente_manuel_anibal_rodriguez_salas",
+                "patterns": ["¿Quién es Manuel Anibal Rodriguez Salas?", "Dime sobre Manuel Anibal Rodriguez Salas", "Información sobre el profesor Manuel Anibal Rodriguez Salas"],
+                "responses": ["Manuel Anibal Rodriguez Salas es un docente contratado en la Escuela Profesional de Ingeniería de Sistemas e Informática, especializado en Ciencias Sociales."]
+            },
+            {
+                "tag": "docente_marco_antonio_quispe_pacho",
+                "patterns": ["¿Quién es Marco Antonio Quispe Pacho?", "Dime sobre Marco Antonio Quispe Pacho", "Información sobre el profesor Marco Antonio Quispe Pacho"],
+                "responses": ["Marco Antonio Quispe Pacho es un docente contratado en la Escuela Profesional de Ingeniería de Sistemas e Informática, especializado en Ingeniería de Sistemas."]
+            },
+            {
+                "tag": "docente_marcos_rufino_mamani_laqui",
+                "patterns": ["¿Quién es Marcos Rufino Mamani Laqui?", "Dime sobre Marcos Rufino Mamani Laqui", "Información sobre el profesor Marcos Rufino Mamani Laqui"],
+                "responses": ["Marcos Rufino Mamani Laqui es un docente contratado en la Escuela Profesional de Ingeniería de Sistemas e Informática, especializado en Ingeniería de Sistemas."]
+            },
+            {
+                "tag": "docente_mick_anderson_turpo_quispe",
+                "patterns": ["¿Quién es Mick Anderson Turpo Quispe?", "Dime sobre Mick Anderson Turpo Quispe", "Información sobre el profesor Mick Anderson Turpo Quispe"],
+                "responses": ["Mick Anderson Turpo Quispe es un docente contratado en la Escuela Profesional de Ingeniería de Sistemas e Informática, especializado en Ciencias Sociales."]
+            },
+            {
+                "tag": "docente_raul_jose_calienes_nunez",
+                "patterns": ["¿Quién es Raul Jose Calienes Nuñez?", "Dime sobre Raul Jose Calienes Nuñez", "Información sobre el profesor Raul Jose Calienes Nuñez"],
+                "responses": ["Raul Jose Calienes Nuñez es un docente contratado en la Escuela Profesional de Ingeniería de Sistemas e Informática, especializado en Ingeniería de Sistemas."]
+            },
+            {
+                "tag": "docente_rene_lucio_chambi_cusi",
+                "patterns": ["¿Quién es Rene Lucio Chambi Cusi?", "Dime sobre Rene Lucio Chambi Cusi", "Información sobre el profesor Rene Lucio Chambi Cusi"],
+                "responses": ["Rene Lucio Chambi Cusi es un docente contratado en la Escuela Profesional de Ingeniería de Sistemas e Informática, especializado en Ciencias Sociales."]
+            },
+            {
+                "tag": "docente_yessenia_yeny_carrillo_chire",
+                "patterns": ["¿Quién es Yessenia Yeny Carrillo Chire?", "Dime sobre Yessenia Yeny Carrillo Chire", "Información sobre la profesora Yessenia Yeny Carrillo Chire"],
+                "responses": ["Yessenia Yeny Carrillo Chire es una docente contratada en la Escuela Profesional de Ingeniería de Sistemas e Informática, especializada en Ingeniería de Sistemas."]
+            },
+            {
+                "tag": "docente_abraham_hermes_maquera_quispe",
+                "patterns": ["¿Quién es Abraham Hermes Maquera Quispe?", "Dime sobre Abraham Hermes Maquera Quispe", "Información sobre el profesor Abraham Hermes Maquera Quispe"],
+                "responses": ["Abraham Hermes Maquera Quispe es un docente contratado en la Escuela Profesional de Ingeniería de Sistemas e Informática, especializado en Ingeniería de Sistemas."]
+            },
+
+            {
+                "tag": "informinformacion_general1",
+                "patterns": [
+                    "¿Qué es la carrera de Ingeniería de Sistemas e Informática?",
+                    "Información sobre Ingeniería de Sistemas e Informática",
+                    "Detalles sobre la carrera de Ingeniería de Sistemas e Informática"
+                ],
+                "responses": [
+                    "La carrera de Ingeniería de Sistemas e Informática se enfoca en la formación de profesionales capaces de diseñar, desarrollar e implementar sistemas informáticos eficientes y soluciones tecnológicas innovadoras.",
+                    "Ingeniería de Sistemas e Informática es una disciplina que integra conocimientos de informática, matemáticas y ciencias de la computación para resolver problemas complejos en diversas áreas."
+                ]
+            },
+            {
+                "tag": "duracion_carrera",
+                "patterns": [
+                    "¿Cuánto dura la carrera?",
+                    "Duración de la carrera",
+                    "¿Cuántos años dura la carrera?"
+                ],
+                "responses": [
+                    "La carrera de Ingeniería de Sistemas e Informática tiene una duración de 5 años, divididos en 10 semestres académicos.",
+                    "La duración de la carrera de Ingeniería de Sistemas e Informática es de 10 semestres, equivalentes a 5 años de estudios a tiempo completo."
+                ]
+            },
+            {
+                "tag": "requisitos_ingreso",
+                "patterns": [
+                    "¿Cuáles son los requisitos para ingresar a la carrera?",
+                    "Requisitos de ingreso a la carrera",
+                    "¿Qué se necesita para ingresar a la carrera?"
+                ],
+                "responses": [
+                    "Para ingresar a la carrera de Ingeniería de Sistemas e Informática, se requiere haber concluido la educación secundaria y aprobar el examen de admisión de la universidad. Los requisitos de ingreso a la carrera incluyen haber completado la educación secundaria y obtener un puntaje satisfactorio en el examen de admisión."
+                ]
+            },
+            {
+                "tag": "horarios_clases",
+                "patterns": [
+                    "¿Cuáles son los horarios de las clases?",
+                    "Horarios de clases",
+                    "¿A qué hora son las clases?"
+                ],
+                "responses": [
+                    "Los horarios de las clases varían según el semestre y los cursos, pero generalmente se imparten de lunes a viernes entre las 7:30 am y las 8:00 pm.",
+                    "Las clases se programan de lunes a viernes en horarios que pueden variar dependiendo del semestre y la disponibilidad de los profesores."
+                ]
+            },
+            {
+                "tag": "contacto_facultad",
+                "patterns": [
+                    "¿Cómo puedo contactar a la facultad?",
+                    "Información de contacto de la facultad",
+                    "¿Cuál es el contacto de la facultad?"
+                ],
+                "responses": [
+                    "Puedes contactar a la facultad de Ingeniería de Sistemas e Informática a través del correo electrónico de la facultad o llamando al número oficial de la universidad.",
+                    "Para contactar a la facultad de Ingeniería de Sistemas e Informática, puedes enviar un correo electrónico a [correo electrónico de la facultad] o llamar al [número de teléfono]."
+                ]
+            },
+            {
+                "tag": "requisitos_bachiller",
+                "patterns": [
+                    "¿Qué requisitos necesito para poder sacar el bachiller?",
+                    "¿El bachiller es automático?"
+                ],
+                "responses": [
+                    "Para obtener el bachiller, es necesario cumplir con los siguientes requisitos: - Aprobar todos los cursos de la currícula satisfactoriamente. - Haber realizado 40 horas de proyección social. - Aprobar los cursos curriculares tales como deporte y arte. Actualmente, el bachiller ya no es automático."
+                ]
+            },
+            {
+                "tag": "proyeccion_social",
+                "patterns": [
+                    "¿Qué es la proyección social?",
+                    "¿Es necesario la proyección social?",
+                    "¿Cómo puedo sumar horas para completar mi proyección social?"
+                ],
+                "responses": [
+                    "La proyección social es una rama de la comunidad universitaria que se caracteriza por brindar tus conocimientos y/o apoyo a sectores de la población.Es indispensable completar las horas de proyección social para obtener el grado de bachiller. Para sumar horas de proyección social, hay dos maneras: - Participar en proyectos que realicen los docentes durante la carrera. - Tomar un curso cocurricular que suele abrirse cada semestre, el cual te completa automáticamente las horas al aprobarlo."
+                ]
+            },
+            {
+                "tag": "cursos_cocurriculares",
+                "patterns": [
+                    "¿Qué son los cursos cocurriculares?",
+                    "¿Son necesarios los cursos cocurriculares?"
+                ],
+                "responses": [
+                    "Los cursos cocurriculares son adicionales y recreativos, diseñados para que los estudiantes interactúen y destaquen habilidades en la universidad. Son obligatorios para poder realizar el trámite de grado de obtención de bachiller."
+                ]
+            },
+            {
+                "tag": "preguntas_generales",
+                "patterns": [
+                    "¿Qué son las prácticas preprofesionales?",
+                    "Definición de prácticas preprofesionales",
+                    "Importancia de las prácticas preprofesionales"
+                ],
+                "responses": [
+                    "Las prácticas preprofesionales permiten al estudiante aplicar sus conocimientos, habilidades y aptitudes mediante el desempeño de labores específicas en una situación real de trabajo. Son un requisito indispensable para obtener el grado académico de Bachiller en la UNAM."
+                ]
+            },
+            {
+                "tag": "objetivo_reglamento",
+                "patterns": [
+                    "¿Cuál es el objetivo del Reglamento de Prácticas Preprofesionales?",
+                    "Objetivo del reglamento de prácticas",
+                    "Propósito del reglamento de prácticas preprofesionales"
+                ],
+                "responses": [
+                    "El objetivo del Reglamento de Prácticas Preprofesionales es normar los procedimientos para la realización de las prácticas preprofesionales en el ámbito de las Escuelas Profesionales de la Universidad Nacional de Moquegua."
+                ]
+            },
+            {
+                "tag": "requisitos_practicas",
+                "patterns": [
+                    "¿Cuáles son los requisitos para realizar prácticas preprofesionales?",
+                    "Requisitos para hacer prácticas preprofesionales",
+                    "Condiciones para realizar prácticas en la UNAM",
+                    "¿Qué necesito para empezar mis prácticas preprofesionales?",
+                    "Requisitos de prácticas preprofesionales en la UNAM"
+                ],
+                "responses": [
+                    "Para realizar prácticas preprofesionales en la UNAM, el estudiante debe cumplir con los siguientes requisitos: 1. Haber concluido y aprobado todas las asignaturas correspondientes al Plan de Estudios hasta el sexto ciclo o ser egresado que haya completado sus estudios regulares. 2. Presentar una carta de presentación y solicitud de aceptación emitida por la Facultad o Escuela Profesional correspondiente. 3. Contar con un seguro contra accidentes y riesgos profesionales, el cual puede ser proporcionado por la universidad o contratado de manera particular. 4. Inscribirse en el registro de prácticas preprofesionales de la universidad y completar la ficha de inscripción correspondiente. 5. Cumplir con las normativas y procedimientos establecidos en el Reglamento de Prácticas Preprofesionales de la UNAM."
+                ]
+            },
+            {
+                "tag": "documentos_necesarios",
+                "patterns": [
+                    "¿Qué documentos necesito para iniciar mis prácticas preprofesionales?",
+                    "Documentos requeridos para prácticas preprofesionales",
+                    "Papeles necesarios para empezar prácticas en la UNAM",
+                    "¿Qué documentación es necesaria para prácticas preprofesionales?"
+                ],
+                "responses": [
+                    "Para iniciar tus prácticas preprofesionales en la UNAM, necesitas presentar los siguientes documentos: 1. Carta de presentación y solicitud de aceptación emitida por la Facultad o Escuela Profesional. 2. Ficha de inscripción al registro de prácticas preprofesionales. 3. Copia del seguro contra accidentes y riesgos profesionales. 4. Copia del DNI (Documento Nacional de Identidad). 5. Constancia de haber aprobado todas las asignaturas hasta el sexto ciclo o constancia de egresado."
+                ]
+            },
+            {
+                "tag": "procedimiento_practicas",
+                "patterns": [
+                    "¿Cuál es el procedimiento para solicitar prácticas preprofesionales?",
+                    "Pasos para solicitar prácticas preprofesionales en la UNAM",
+                    "Proceso para pedir prácticas preprofesionales",
+                    "Procedimiento para empezar prácticas en la UNAM"
+                ],
+                "responses": [
+                    "El procedimiento para solicitar prácticas preprofesionales en la UNAM es el siguiente: 1. Verificar que cumples con los requisitos académicos y documentales necesarios. 2. Solicitar y obtener la carta de presentación de la Facultad o Escuela Profesional. 3. Inscribirte en el registro de prácticas preprofesionales y completar la ficha de inscripción. 4. Presentar todos los documentos requeridos en la oficina correspondiente. 5. Esperar la aprobación y asignación de la entidad donde realizarás las prácticas."
+                ]
+            },
+            {
+                "tag": "caracteristicas_practicas",
+                "patterns": [
+                    "¿Cuáles son las características de las prácticas preprofesionales?",
+                    "Características de las prácticas en la UNAM",
+                    "Aspectos de las prácticas preprofesionales"
+                ],
+                "responses": [
+                    "Las prácticas preprofesionales están orientadas a la aplicación de los conocimientos teóricos y prácticos para compatibilizar con los conocimientos adquiridos en la formación profesional. Se caracterizan por ser integrales, sistemáticas, diversificadas, realistas, formativas y polivalentes."
+                ]
+            },
+            {
+                "tag": "finalidad_practicas",
+                "patterns": [
+                    "¿Cuál es la finalidad de las prácticas preprofesionales?",
+                    "Propósito de las prácticas preprofesionales",
+                    "Importancia de las prácticas en la UNAM"
+                ],
+                "responses": [
+                    "Las prácticas preprofesionales tienen por finalidad poner al estudiante o egresado en contacto directo con situaciones reales vinculadas a su especialidad, logrando afianzar sus conocimientos, desarrollar sus habilidades y destrezas, y adquirir competencias necesarias para enfrentar las responsabilidades profesionales."
+                ]
+            },
+            {
+                "tag": "alcance_reglamento",
+                "patterns": [
+                    "¿Cuál es el alcance del Reglamento de Prácticas Preprofesionales?",
+                    "Alcance del reglamento de prácticas",
+                    "Ámbito de aplicación del reglamento de prácticas"
+                ],
+                "responses": [
+                    "El Reglamento de Prácticas Preprofesionales tiene alcance para su cumplimiento en las Escuelas Profesionales de la Universidad Nacional de Moquegua."
+                ]
+            },
+            {
+                "tag": "base_legal",
+                "patterns": [
+                    "¿Cuál es la base legal del Reglamento de Prácticas Preprofesionales?",
+                    "Legislación del reglamento de prácticas",
+                    "Marco legal del reglamento de prácticas preprofesionales"
+                ],
+                "responses": [
+                    "El Reglamento de Prácticas Preprofesionales tiene como base legal la Ley Nº 30220, Ley Universitaria; la Ley Nº 28518 sobre Modalidades Formativas Laborales; el Decreto Legislativo Nº 1401, que regula las modalidades formativas de servicios en el sector público, y otras normativas relevantes."
+                ]
+            },
+            {
+                "tag": "duracion_horarios",
+                "patterns": [
+                    "¿Cuál es la duración de las prácticas preprofesionales?",
+                    "¿Cuánto tiempo duran las prácticas preprofesionales?",
+                    "Horarios de las prácticas preprofesionales",
+                    "Duración y horarios de las prácticas en la UNAM"
+                ],
+                "responses": [
+                    "La duración de las prácticas preprofesionales en la UNAM es de 400 horas, distribuidas en un periodo que puede variar según la disponibilidad del estudiante y las necesidades de la entidad receptora. Los horarios se acordarán entre el estudiante y la entidad donde se realicen las prácticas, asegurando que no interfieran con las actividades académicas del estudiante."
+                ]
+            },
+
+            {
+                "tag": "estructura_informe_practicas_preprofesionales",
+                "patterns": [
+                    "¿Cuál es la estructura del informe de prácticas preprofesionales?",
+                    "Formato del informe de prácticas preprofesionales",
+                    "Elementos del informe de prácticas preprofesionales"
+                ],
+                "responses": [
+                    "La estructura del informe de prácticas preprofesionales debe incluir los siguientes elementos:\n \n CARÁTULA:\n a) Nombre de la Universidad\n b) Nombre de la Escuela Profesional\n c) Logo de la Escuela Profesional en la parte central\n d) Título del Informe de Prácticas Preprofesionales\n e) Nombre y código del estudiante o egresado\n f) Nombre de la institución donde realizó las prácticas\n g) Fecha de entrega del Informe\n\n ÍNDICE O TABLA DE CONTENIDOS\n INTRODUCCIÓN \n\n CAPÍTULO I: DESCRIPCIÓN DE LA INSTITUCIÓN\n 1. Información General: Razón social, RUC, ubicación, servicios que brinda, horario de atención, etc.\n 2. Visión y Misión\n 3. Breve Reseña Histórica\n 4. Personal que labora en el área de prácticas\n 5. Funciones del área de prácticas\n 6. Ubicación estructural del área de práctica (Organigrama)\n 7. Ejecución de las prácticas (inicio, término, total de horas)\n\n CAPÍTULO II: DESCRIPCIÓN DE LAS FUNCIONES O ACTIVIDADES REALIZADAS\n 1. Descripción operativa de las funciones o actividades desarrolladas, las cuales deben guardar relación con su especialidad (señalar en forma detallada su participación)\n 2. Indicar la metodología y los procedimientos utilizados\n\n CAPÍTULO III: RESULTADOS O APORTES DEL (LA) PRACTICANTE\n 1. En el aspecto Cognoscitivo (Dificultades y logros en relación a la aplicación de la teoría aprendida)\n 2. En el aspecto Procedimental (Dificultades y aportes para la mejora de procesos)\n 3. En el aspecto Actitudinal (Dificultades y logros respecto al Clima Institucional)\n\n CONCLUSIONES Y RECOMENDACIONES\n BIBLIOGRAFÍA\n ANEXOS\n\n Nota: La presentación del Informe Final tendrá en cuenta los siguientes aspectos:\n a) Papel formato A-4\n b) Espacio interlineal: 1,5\n c) Margen izquierdo: 3.5 cm, margen derecho, superior e inferior: 3 cm.\n d) Numeración de página en la parte inferior derecho.\n e) Tipo de letra: Arial (12)"
+                ]
+            },
+        {
+        "tag": "docente_juan_valero",
+        "patterns": ["¿Quién es Juan Carlos Valero Gomez?", "Información sobre Juan Carlos Valero Gomez", "¿Qué enseña Juan Carlos Valero Gomez?", "¿Cuál es la especialidad de Juan Carlos Valero Gomez?", "¿En qué proyectos ha trabajado Juan Carlos Valero Gomez?"],
+        "responses": [
+            "El profesor Juan Carlos Valero Gomez esta acargo de las funciones del Fondo Editorial de la UNAM, además de tener a cargo la revista de divulgación cientifica SINCRETISMO. Licenciado en Inginerio de Sistemas e Informática.",
+            "Alex Juan Carlos Valero Gomez se especializa Ingeniería de sistemas y comunicaciones.",
+            "Cuenta con un proyecto de investigación titulado ANÁLISIS DE MODELOS PREDICTIVOS BASADOS EN VISIÓN COMPUTACIÓNAL APLICADOS AL PARALELISMO, finalizado en agosto del 2019."
+        ]
+    },
+    {
+        "tag": "docente_alberto_limache",
+        "patterns": ["¿Quién es Alberto Limache Flores?", "Información sobre Alberto Limache Flores", "¿Qué enseña Alberto Limache Flores?", "¿Cuál es la especialidad de Alberto Limache Flores?", "¿En qué proyectos ha trabajado Alberto Limache Flores?"],
+        "responses": [
+            "El profesor Alberto Limache Flores cuenta con el grado de Magister en Gestión Publica de la UCV, Egresado de Maestría de Proyectos de Inversión, Ingeniero de Sistemas e Informática de la UAP, Bachiller en Ingeniería de Sistemas e Informática de la UJCM, Docente contratado en la Universidad Nacional de Moquegua.",
+            "Alberto Limache Flores cuenta con el proyecto de investigación CLIMA ORGANIZACIONAL Y SATISFACCIÓN LABORAL EN EL PERSONAL ADMINISTRATIVO DE LA GERENCIA DE INFRAESTRUCTURA PÚBLICA DEL GOBIERNO REGIONAL DE MOQUEGUA, 2015.",
+            "Cuenta con una amplia experiencia laboral como docente desde el año 2011."
+        ]
+    },
+    {
+        "tag": "docente_edson_huertas",
+        "patterns": ["¿Quién es Edson Buenaventura Huertas Flores?", "Información sobre Edson Buenaventura Huertas Flores", "¿Qué enseña Edson Buenaventura Huertas Flores?", "¿Cuál es la especialidad de Edson Buenaventura Huertas Flores?", "¿En qué proyectos ha trabajado Edson Buenaventura Huertas Flores?"],
+        "responses": [
+            "El profesor Edson Buenaventura Huertas Flores cuenta con título profesional como Ingeniro de Sistemas de la Universidad privada de Tacna. Magister en Ingeniría de Sistemas e Informática con mención en seguridad y auditoría informática.",
+            "Edson Buenaventura Huertas Flores se especializa en robótica y circuitos electrónicos.",
+            "Cuenta con investigaciones publicadas en ALICIA."
+        ]
+    },
+    {
+        "tag": "docente_marco_quispe",
+        "patterns": ["¿Quién es Marco Antonio Quispe Pacho?", "Información sobre Marco Antonio Quispe Pacho", "¿Qué enseña Marco Antonio Quispe Pacho?", "¿Cuál es la especialidad de Marco Antonio Quispe Pacho?", "¿En qué proyectos ha trabajado Marco Antonio Quispe Pacho?"],
+        "responses": [
+            "El profesor Marco Antonio Quispe Pacho cuenta con una amplica experiencia laboral desde el año 2010. Licenciado como Ingeniero Estadistico e Enformático en la Universidad Nacional del Altiplano.",
+            "Marco Antonio Quispe Pacho se especializa en estadística y informática.",
+            "Magíster en Contabilidad y Administración."
+        ]
+    },
+    {
+        "tag": "docente_salomon_ramos",
+        "patterns": ["¿Quién es Salomon Rey Ramos Rivera?", "Información sobre Salomon Rey Ramos Rivera", "¿Qué enseña Salomon Rey Ramos Rivera?", "¿Cuál es la especialidad de Salomon Rey Ramos Rivera?", "¿En qué proyectos ha trabajado Salomon Rey Ramos Rivera?"],
+        "responses": [
+            "El profesor Salomon Rey Ramos Rivera es docente ordinario en el área de Matemáticas, Escuela Profesional de Ingeniería de Sistemas e Informática. Licenciado y magíster en Matemáticas.Doctorado en educación.",
+            "Salomon Rey Ramos Rivera se especializa en Matemáticas aplicadas, Hardware y arquitectura de computadores.",
+            "Ha participado en el proyecto de investigación titulado Aplicación de redes neuronales profundas para el reconocimiento del Covid-19 a través de radiografías del torax en la región Moquegua."
+        ]
+    },
+    {
+        "tag": "docente_anibal_rodriguez",
+        "patterns": ["¿Quién es Manuel Anibal Rodriguez Salas?", "Información sobre Manuel Anibal Rodriguez Salas", "¿Qué enseña Manuel Anibal Rodriguez Salas?", "¿Cuál es la especialidad de Manuel Anibal Rodriguez Salas?", "¿En qué proyectos ha trabajado Manuel Anibal Rodriguez Salas?"],
+        "responses": [
+            "El profesor Manuel Anibal Rodriguez Salas cuenta con doctorado en Ingeniería Ambiental, docente e investigador en la elaboración de estudios para la Sanación Ambiental, mediante el desarrollo de tecnologías racionales adecuadas al medio ambiente.",
+            "Manuel Anibal Rodriguez Salas cuenta con una amplia experiencia laboral como docente.",
+            "Cuenta con experiencia como evaluador de diversos concursos de proyectos de Investigación."
+        ]
+    },
+    {
+        "tag": "proyeccion_social",
+        "patterns": [
+            "¿Qué es la proyección social?",
+            "¿Es necesaria la proyección social?",
+            "¿Cómo puedo completar mi proyección social?"
+        ],
+        "responses": [
+            "La proyección social es una iniciativa de la comunidad universitaria destinada a compartir conocimientos y apoyo con sectores de la población.Es imprescindible completar las horas de proyección social para obtener el grado de bachiller. Para aprobar la proyección social, debes acumular 40 horas de servicio comunitario. Hay dos formas de completar estas horas: puedes inscribirte en un curso cocurricular al inicio del ciclo académico o participar en proyectos comunitarios organizados por tus docentes."
+        ]
+    },
+    {
+        "tag": "cursos_cocurriculares",
+        "patterns": [
+            "¿Qué son los cursos cocurriculares?",
+            "¿Son necesarios los cursos cocurriculares?",
+            "¿Cuántos cursos cocurriculares hay?",
+            "¿Cuánto duran los cursos cocurriculares?",
+            "¿Qué puedo tomar en el curso cocurricular de Deporte?",
+            "¿Qué puedo tomar en el curso cocurricular de Arte?"
+        ],
+        "responses": [
+            "Los cursos cocurriculares son actividades adicionales y recreativas diseñadas para que los estudiantes interactúen y desarrollen habilidades en la universidad. Los cursos cocurriculares son obligatorios ya que son parte de los requisitos para obtener el grado de bachiller.Hay un total de 3 cursos cocurriculares disponibles: Deporte, Arte y Proyección Social, siendo Proyección Social un curso que complementa para obtener las horas necesarias de proyección social. Los cursos cocurriculares tienen una duración de un semestre académico. Es recomendable estar atento a su apertura al inicio del ciclo y matricularse a tiempo. En Deporte tienes 3 opciones: Fútbol, Vóley o Baloncesto, y todos tienen la misma duración.En Arte tienes 2 opciones: Música o Danza, y ambos tienen la misma duración."
+        ]
+    }
+   ]
+}
+
