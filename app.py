@@ -13,7 +13,9 @@ app = Flask(__name__)
 nlp = spacy.load('es_core_news_sm')
 
 # Cargar los datos de intenciones y el modelo entrenado
-intents = json.loads(open('intents.json').read())
+with open('intents.json', 'r', encoding='utf-8') as file:
+    intents = json.load(file)
+
 words = pickle.load(open('words.pkl', 'rb'))
 classes = pickle.load(open('classes.pkl', 'rb'))
 model = load_model('chatbot_model.h5')
