@@ -7,7 +7,7 @@
   },
   "deploy": {
     "runtime": "V2",
-    "startCommand": "python3 app.py",
+    "startCommand": "python app.py",
     "numReplicas": 1,
     "sleepApplication": false,
     "restartPolicyType": "ON_FAILURE",
