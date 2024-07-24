@@ -81,15 +81,20 @@ function scrollToBottom() {
 }
 // Función para formatear la respuesta
 function formatResponse(response) {
-    // Separar el texto en párrafos
-    var paragraphs = response.split("\n");
-    
-    // Construir el HTML para cada párrafo
+    // Separar el texto en párrafos, listas y otros elementos
     var html = "";
+
+    // Separar el texto en párrafos usando dos saltos de línea
+    var paragraphs = response.split(/\n\s*\n/);
     paragraphs.forEach(function(paragraph) {
-        html += "<p>" + paragraph.trim() + "</p>";
+        // Comprobar si el párrafo contiene listas
+        if (paragraph.includes("<ol>") || paragraph.includes("<ul>")) {
+            html += paragraph.trim();
+        } else {
+            html += "<p>" + paragraph.trim() + "</p>";
+        }
     });
-    
+
     return html;
 }
 </script>

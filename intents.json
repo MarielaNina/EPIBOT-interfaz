@@ -7,12 +7,12 @@
             },
             {
                 "tag": "despedida",
-                "patterns": ["Adiós", "Hasta luego", "Nos vemos", "Gracias, adiós"],
+                "patterns": ["Adiós", "Hasta luego", "Nos vemos", "Gracias, adiós, chau, me voy, adios"],
                 "responses": ["¡Hasta luego! Si necesitas más ayuda, estaré aquí.", "¡Adiós! Que tengas un buen día.", "¡Nos vemos pronto! No dudes en regresar si tienes más preguntas."]
             },
             {
                 "tag": "sin_respuesta",
-                "patterns": [],
+                "patterns": [""],
                 "responses": ["Lo siento, no entiendo tu pregunta. ¿Puedes formularla de otra manera?", "No estoy seguro de cómo responder a eso. ¿Puedes intentar preguntarme algo más?", "No tengo la información que buscas en este momento. ¿Puedo ayudarte con otra cosa?"]
             },
             {
@@ -924,6 +924,119 @@
         "responses": [
             "Los cursos cocurriculares son actividades adicionales y recreativas diseñadas para que los estudiantes interactúen y desarrollen habilidades en la universidad. Los cursos cocurriculares son obligatorios ya que son parte de los requisitos para obtener el grado de bachiller.Hay un total de 3 cursos cocurriculares disponibles: Deporte, Arte y Proyección Social, siendo Proyección Social un curso que complementa para obtener las horas necesarias de proyección social. Los cursos cocurriculares tienen una duración de un semestre académico. Es recomendable estar atento a su apertura al inicio del ciclo y matricularse a tiempo. En Deporte tienes 3 opciones: Fútbol, Vóley o Baloncesto, y todos tienen la misma duración.En Arte tienes 2 opciones: Música o Danza, y ambos tienen la misma duración."
         ]
+    },
+    {
+        "tag": "requisitos_grado",
+        "patterns": ["¿Qué se requiere para poder obtener mi grado de bachiller?", "¿Qué condiciones debo cumplir para graduarse con un título de bachiller?", "Requisitos para poder obtener el grado de bachiller", "Requisitos para poder obtener titulo profesional"],
+        "responses": ["a) Acreditar haber aprobado los estudios de pregrado en la Universidad origen. b) Acreditar haber realizado y aprobado un trabajo de investigación. c) Acreditar el conocimiento de un idioma extranjero, de preferencia inglés o lengua nativa, a nivel intermedio. La universidad tomará un examen de suficiencia. d) Acreditar haber cumplido con la realización de las Prácticas Preprofesionales por un período mínimo de tres (03) meses."
+        ]
+    },
+    {
+        "tag": "requisitos_practicas",
+        "patterns": ["¿Cuál es el tiempo que se requiere para que sean las prácticas preprofesionales?", "¿Cuánto tiempo dura el período de prácticas preprofesionales?", " duración total de las prácticas preprofesionales requeridas", "¿Cuál es el período mínimo o máximo de tiempo para las prácticas preprofesionales?", "plazo establecido para las prácticas preprofesionales"],
+        "responses": [
+            "Prácticas Preprofesionales por un período mínimo de tres (03) meses como requisito para optar por grado bachiller y título profesional."
+           
+        ]
+    },
+    {
+        "tag": "requisitos_idioma",
+        "patterns": ["¿Que nivel de ingles se requiere para obtener el titulo profesional?", "¿Cuáles son los requisitos del idioma extrangero para obtener el título profesional?", "¿Qué nivel de inglés se requiere para obtener el grado de bachiller?", "Conocimiento de idioma para grado de bachiller y titulo profesional"],
+        "responses": [
+            "Conocimiento de un idioma extranjero, de preferencia inglés o lengua nativa, a nivel intermedio. La universidad tomará un examen de suficiencia."
+            
+        ]
+    },
+    {
+        "tag": "trabajo_investigacion_integrantes",
+        "patterns": ["¿Numero de integrantes para el trabajo de investigación para optar el Grado Académico de Bachiller?", "cantidad de integrantes para trabajo de investigación Grado Academico de Bachiller", "integrantes para el trabajo de investigacion para optar grado de Bachiller"],
+        "responses": [
+            "Puede ser individual o grupal, dos (02) integrantes como máximo."
+        ]
+    },
+    {
+        "tag": "trabajo_investigacion",
+        "patterns": ["Trabajo de investigación para el grado de bachiller", "¿Como debe ser el trabajo de investigación para el grado de bachiller?", "sobre el trabajo de investigación para el grado de bachiller"],
+        "responses": [
+            "Supone rigurosidad y objetividad. Tiene un propósito claramente definido, ya que responde a una pregunta de investigación, se apoya en conocimiento existente, aplica una metodología determinada, aporta evidencia verificable, proporciona explicaciones objetivas y racionales, y mantiene un espíritu autocrítico."
+        ]
+    },
+    {
+        "tag": "trabajo_tema",
+        "patterns": ["¿Que tipo de trabajo puede ser mi trabajo de investigación ?", "naturaleza de estudio del trabajo de investigación grado bachiller", "¿De que tema puede ser mitrabajo de investigación grado bachiller?"],
+        "responses": [
+            "El trabajo de investigación abordará, a su elección, un tema de acuerdo a las líneas de investigación definidas para cada Escuela Profesional. Cuya naturaleza de estudio sea cualitativa, cuantitativa o mixta."
+        ]
+    },
+    {
+        "tag": "trabajo_asesor",
+        "patterns": ["¿A partir de que ciclo puedo solicitar un asesor para mi trabajo de investigación de bachiller?", "sobre asesor para trabajo de investigación de bachiller", "asesor para trabajo de investigación de bachiller"],
+        "responses": [
+            "Los estudiantes, a partir del séptimo ciclo, podrán solicitar la designación de un docente para el asesoramiento, revisión y ejecución del Plan del Trabajo de Investigación."
+        ]
+    },
+    {
+        "tag": "trabajo_jurado",
+        "patterns": ["¿Cuántos jurados evaluan el informe de trabajo de investigacion?", "jurados que evaluan el informe de trabajo de investigacion", "jurados del informe de trabajo de investigacion"],
+        "responses": [
+            "Se designan tres docentes como jurados,  uno de los cuales deberá ser obligatoriamente un docente ordinario. El Jurado evaluará el Informe del Trabajo de Investigación en un plazo no mayor a diez días hábiles desde su designación."
+        ]
+    },
+    {
+        "tag": "procedimiento_tramite",
+        "patterns": ["¿Qué trámites se realiza para obtener el Grado Académico?", "¿Qué trámites se realiza para obtener el grado de bachiller?", "Procedimientos para obtener mi grado de bachiller", "¿Cómo inicio mi trámite para obtener mi grado de bachiller?"],
+        "responses": [
+            "Para obtener el Grado Académico, el egresado deberá iniciar el trámite presentando en su Escuela Profesional: a) Solicitud dirigida al Director de la Escuela Profesional o quien haga sus veces, indicando la fecha y numero de comprobante de pago. b) Dos (02) fotografías de frente, tamaño pasaporte, a color, con traje formal y fondo blanco: garantizando de esta forma la seguridad ciudadana. Posteriormente se presenta los documentos correspondientes a la oficina de DASA."
+        ]
+    },
+
+    {
+        "tag": "presentacion_documentos",
+        "patterns": ["¿Qué documentos se presenta para obtener mi grado Académico?", "¿Dónde se presenta los documentos para obtener mi título de bachiller?", "Documentación que se presenta para obtener mi grado académico", "Documentación que se presenta para obtener mi grado de bachiller" ],
+        "responses": ["Previa solicitud dirigida al Director de la Escuela Profesional La Dirección de Actividades y Servicios Académicos es la responsable de completar el expediente del egresado junto con las Escuela Profesional, en un plazo máximo de 7 días hábiles para su trámite correspondiente, con los siguientes documentos:  1) Constancia de Prácticas Preprofesionales. 2) Certificado de estudios del idioma inglés o lengua nativa, nivel intermedio. 3) Certificado de Estudios originales. 4) Constancia de haber realizado Actividades Cocurriculares. 5) Constancia de 'no adeudo' de Bienes a la Universidad, bienes a los Laboratorios Básicos y de Especialidad, material Bibliográfico; 6) Copia simple de la Constancia de Egresado. 7) Copia simple de la Constancia de Inicio de Matrícula."
+        ]
+    },
+    {
+        "tag": "proyecto_tesis",
+        "patterns": ["Definición de Proyecto de Tesis", "¿Qué es un proyecto de tesis?" ],
+        "responses": [
+            "El Proyecto de Tesis es el plan de un trabajo de investigación, individual o en pares, cuya finalidad es resolver un problema objeto de estudio. Dicho documento deberá ser presentado a la Dirección de la Escuela Profesional, por los estudiantes del último año académico, egresados o bachilleres."
+        ]
+    },
+    {
+        "tag": "lugar_fecha_sustentacion",
+        "patterns": ["¿Cómo es la sustentación de tesis?", "¿Qué es la sustentación de tesis?", "¿Cuándo es la sustentación de tesis?", "¿Dónde es la sustentación de tesis?" ],
+        "responses": [
+            "El Director de la Escuela Profesional, con un mínimo de dos (2) días hábiles de anticipación, publicará a través del medio de comunicación respectivo (página web de la Universidad Nacional de Moquegua), la fecha, lugar y hora de sustentación de la Tesis. El acto de sustentación de Tesis se efectuará dentro del Campus Universitario o mediante la plataforma virtual de la Universidad Nacional de Moquegua. " 
+       ]
+    },
+    {
+        "tag": "duracion_sustentacion",
+        "patterns": ["¿Cuánto dura la sustentación de tesis?", "¿Hay tiempo límite en la sustentación de tesis?" ],
+        "responses": [
+            "En el Acto de sustentación, el Presidente del Jurado, concede al tesista un tiempo máximo de 45 minutos, tiempo necesario para la sustentación de la Tesis."
+      ]
+    },
+    {
+        "tag": "preguntas_sustentacion",
+        "patterns": ["¿Cuántas preguntas se realiza en la sustentación de tesis?", "¿Se realiza preguntas en la sustentación de tesis?", "¿Quién realiza las preguntas en la sustentación de tesis?", "Preguntas en la sustentación de tesis" ],
+        "responses": [
+            "Al finalizar la sustentación, el Jurado formula las preguntas sobre la exposición y materias relacionadas con el tópico, en ningún caso deberá modificarse el texto ni el título de la tesis presentada. Dicho acto se lleva a cabo empezando por el segundo miembro, luego el primero y finalmente el Presidente del Jurado."
+      ]
+    },
+    {
+        "tag": "puntaje_sustentacion",
+        "patterns": ["¿Cuántas preguntas se realiza en la sustentación de tesis?", "¿Se realiza preguntas en la sustentación de tesis?", "¿Quién realiza las preguntas en la sustentación de tesis?", "Preguntas en la sustentación de tesis" ],
+        "responses": [
+            "Terminada la sustentación y defensa de la Tesis, el Presidente del Jurado invita al público a desocupar el ambiente respectivo, y procede a deliberar en estricto privado. La calificación de la sustentación y defensa de la Tesis, se hará teniendo en cuenta la Ficha de Evaluación de Tesis y considerando la escala vigesimal: a) Aprobado (excelente) 17-20 puntos. b) Aprobado 11-16 puntos. c) Desaprobado 0 -10 puntos"
+      ]
+    },
+    {
+        "tag": "desaprobar_sustentacion",
+        "patterns": ["¿Qúe pasa si desapruebo la sustentación de tesis?", "¿Se puede desaprobar en la sustentación de tesis?", "¿Qué pasa si no apruebo en la sustentación de tesis?", "Desaprobar en la sustentación de tesis" ],
+        "responses": [
+            "Si la nota final es desaprobatoria el ejecutor de la tesis tiene una segunda oportunidad, para que después de un periodo no mayor de tres (3) meses, pueda nuevamente sustentar el mismo trabajo. Si es reprobado por segunda vez, el tesista debe presentar un nuevo Proyecto de Tesis."
+      ]
     }
    ]
 }

@@ -6,6 +6,7 @@ import numpy as np
 import spacy
 import unidecode  # Para quitar las tildes
 from keras.models import load_model
+import re  # Para expresiones regulares
 
 app = Flask(__name__)
 
@@ -22,6 +23,14 @@ model = load_model('chatbot_model.h5')
 
 # Lista de stopwords personalizada
 stopwords = ["y", "de", "pero", "las", "la", "le", "los", "un", "una", "unos", "unas", "a", "en", "que", "con", "por", "para"]
+
+# Función para verificar si una oración tiene sentido
+def is_meaningful(sentence):
+    doc = nlp(sentence)
+    # Filtramos tokens que no sean palabras significativas
+    tokens = [token for token in doc if token.is_alpha and token.text.lower() not in stopwords]
+    # Retornamos True si la oración contiene suficientes tokens significativos
+    return len(tokens) > 0  # Ajusta el umbral según sea necesario
 
 # Pasamos las palabras de la oración a su forma raíz
 def clean_up_sentence(sentence):
@@ -40,22 +49,29 @@ def bag_of_words(sentence):
     return np.array(bag)
 
 # Predecimos la categoría a la que pertenece la oración
-def predict_class(sentence):
+def predict_class(sentence, threshold=0.5):
     bow = bag_of_words(sentence)
     res = model.predict(np.array([bow]))[0]
     max_index = np.argmax(res)
-    category = classes[max_index]
-    return category
+    confidence = res[max_index]
+    if confidence >= threshold:
+        return classes[max_index], confidence
+    else:
+        return None, confidence
 
 # Obtenemos una respuesta aleatoria
 def get_response(tag, intents_json):
     list_of_intents = intents_json['intents']
-    result = ""
     for i in list_of_intents:
         if i["tag"] == tag:
-            result = random.choice(i['responses'])
-            break
-    return result
+            return random.choice(i['responses'])
+    return "Con gusto te ayudaría,pero necesito un poco más de información para entender tu consulta. ¿Puedes ser más específico, por favor?"
+
+# Elimina puntos y otros caracteres no deseados
+def clean_input(user_input):
+    # Reemplaza los puntos y caracteres no alfabéticos (excepto espacios) por nada
+    cleaned_input = re.sub(r'[^\w\s]', '', user_input)
+    return cleaned_input
 
 @app.route('/')
 def index():
@@ -64,10 +80,16 @@ def index():
 @app.route('/get', methods=['POST'])
 def chat():
     user_input = request.form['msg']
-    category = predict_class(user_input)
-    response = get_response(category, intents)
+    user_input = clean_input(user_input)  # Limpiar la entrada del usuario
+    if not is_meaningful(user_input):
+        response = "Con gusto te ayudaría,pero necesito un poco más de información para entender tu consulta. ¿Puedes ser más específico, por favor?"
+    else:
+        category, confidence = predict_class(user_input)
+        if category is None:
+            response = "Con gusto te ayudaría,pero necesito un poco más de información para entender tu consulta. ¿Puedes ser más específico, por favor?"
+        else:
+            response = get_response(category, intents)
     return jsonify({'response': response})
 
 if __name__ == '__main__':
-        app.run(debug=True, port=5001) 
-# fib
+    app.run(debug=True, port=5001)
