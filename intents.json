@@ -7,7 +7,7 @@
             },
             {
                 "tag": "despedida",
-                "patterns": ["Adiós", "Hasta luego", "Nos vemos", "Gracias, adiós, chau, me voy, adios"],
+                "patterns": ["Adiós", "Hasta luego", "Nos vemos", "Gracias", "adiós", "chau", "me voy", "adios"],
                 "responses": ["¡Hasta luego! Si necesitas más ayuda, estaré aquí.", "¡Adiós! Que tengas un buen día.", "¡Nos vemos pronto! No dudes en regresar si tienes más preguntas."]
             },
             {
