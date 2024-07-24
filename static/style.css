@@ -110,7 +110,6 @@ border-radius: 0 0 15px 15px !important;
 	height: 50px;
 	display: flex;
 	justify-content: center;
-	
 	cursor: pointer;
 	transition: transform 0.08s ease-in, transform 0.2s ease-out; 
 	
