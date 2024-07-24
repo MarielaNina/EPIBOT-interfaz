@@ -30,7 +30,7 @@ def is_meaningful(sentence):
     # Filtramos tokens que no sean palabras significativas
     tokens = [token for token in doc if token.is_alpha and token.text.lower() not in stopwords]
     # Retornamos True si la oración contiene suficientes tokens significativos
-    return len(tokens) > 0  # Ajusta el umbral según sea necesario
+    return len(tokens) > 1  # Ajusta el umbral según sea necesario
 
 # Pasamos las palabras de la oración a su forma raíz
 def clean_up_sentence(sentence):
