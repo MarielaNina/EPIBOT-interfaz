@@ -7,12 +7,12 @@
             },
             {
                 "tag": "despedida",
-                "patterns": ["Adiós", "Hasta luego", "Nos vemos", "Gracias, adiós"],
+                "patterns": ["Adiós", "Hasta luego", "Nos vemos", "Gracias, adiós, chau, me voy, adios"],
                 "responses": ["¡Hasta luego! Si necesitas más ayuda, estaré aquí.", "¡Adiós! Que tengas un buen día.", "¡Nos vemos pronto! No dudes en regresar si tienes más preguntas."]
             },
             {
                 "tag": "sin_respuesta",
-                "patterns": [],
+                "patterns": [""],
                 "responses": ["Lo siento, no entiendo tu pregunta. ¿Puedes formularla de otra manera?", "No estoy seguro de cómo responder a eso. ¿Puedes intentar preguntarme algo más?", "No tengo la información que buscas en este momento. ¿Puedo ayudarte con otra cosa?"]
             },
             {
