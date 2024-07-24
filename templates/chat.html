@@ -43,6 +43,8 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 
 <script>
+
+   
 $(document).ready(function() {
     $("#messageArea").on("submit", function(event){
         event.preventDefault();
@@ -66,10 +68,16 @@ $(document).ready(function() {
         }).done(function(data){
             var botHtml = '<div class="d-flex justify-content-start mb-4"><div class="img_cont_msg"><img src="https://www.shutterstock.com/image-vector/robot-head-avatar-vector-design-600nw-2352274361.jpg" class="rounded-circle user_img_msg"></div><div class="msg_cotainer">' + formatResponse(data.response) + '<span class="msg_time">' + str_time + '</span></div></div>';
             $("#messageFormeight").append(botHtml);
+            scrollToBottom(); // Llamada para desplazarse hacia abajo
         });
     });
 });
 
+// Función para desplazarse hacia abajo
+function scrollToBottom() {
+    var chatContainer = document.getElementById("messageFormeight");
+    chatContainer.lastElementChild.scrollIntoView({ behavior: 'smooth' });
+}
 // Función para formatear la respuesta
 function formatResponse(response) {
     // Separar el texto en párrafos

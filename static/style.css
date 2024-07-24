@@ -23,13 +23,52 @@ body,html{
 .msg_card_body{
 	overflow-y: auto;
 }
+.msg_card_body::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.msg_card_body::-webkit-scrollbar:vertical {
+    width:5px;
+}
+
+.msg_card_body::-webkit-scrollbar-button:increment,.msg_card_body::-webkit-scrollbar-button {
+    display: none;
+} 
+
+.msg_card_body::-webkit-scrollbar:horizontal {
+    height: 10px;
+}
+
+.msg_card_body::-webkit-scrollbar-thumb {
+    background-color: #2e4464;
+    border-radius: 20px;
+    
+}
+
+.msg_card_body::-webkit-scrollbar-track {
+    border-radius: 10px;  
+}
+
 .card-header{
 	border-radius: 15px 15px 0 0 !important;
 	border-bottom: 0 !important;
 }
+#messageArea{
+	
+	display: flex;
+	gap: 20px;
+	align-items: center;
+}
+#text{
+	
+	border-radius:20px;
+}
+
+
 .card-footer{
 border-radius: 0 0 15px 15px !important;
 	border-top: 0 !important;
+	
 }
 .container{
 	align-content: center;
@@ -63,15 +102,35 @@ border-radius: 0 0 15px 15px !important;
 	cursor: pointer;
 }
 .send_btn{
-	border-radius: 0 15px 15px 0 !important;
-	background-color: rgba(0,0,0,0.3) !important;
+	border-radius: 40px !important;
+	background: #56ff63;
 	border:0 !important;
-	color: white !important;
+	width: 50px;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	
 	cursor: pointer;
+	transition: transform 0.08s ease-in, transform 0.2s ease-out; 
+	
+}
+.send_btn:focus{
+	outline: none;
+	
+}
+.send_btn:hover {
+    background-color: hsl(125, 81%, 59%);
+	transform: scale(1.05);
+}
+.input-group-text{
+	color:#010101
+}
+.input-group-text:hover{
+	color: #252629;
 }
 .search_btn{
 	border-radius: 0 15px 15px 0 !important;
-	background-color: rgba(0,0,0,0.3) !important;
+	background-color: rgba(239, 228, 228, 0.3);
 	border:0 !important;
 	color: white !important;
 	cursor: pointer;
