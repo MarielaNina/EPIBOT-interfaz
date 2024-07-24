@@ -4,6 +4,7 @@ body,html{
 	background: rgb(28, 32, 46);
    background: -webkit-linear-gradient(to right, rgb(40, 59, 34), rgb(54, 60, 70), rgb(32, 32, 43));
 	background: linear-gradient(to right, rgb(38, 51, 61), rgb(50, 55, 65), rgb(33, 33, 78));
+	color: #f5f6fa;
 }
 
 .chat{
@@ -114,6 +115,8 @@ border-radius: 0 0 15px 15px !important;
 	transition: transform 0.08s ease-in, transform 0.2s ease-out; 
 	
 }
+
+
 .send_btn:focus{
 	outline: none;
 	
@@ -123,7 +126,7 @@ border-radius: 0 0 15px 15px !important;
 	transform: scale(1.05);
 }
 .input-group-text{
-	color:#010101
+	color:#ffffff
 }
 .input-group-text:hover{
 	color: #252629;
@@ -209,7 +212,7 @@ border-radius: 0 0 15px 15px !important;
 	margin-bottom: auto;
 	margin-left: 10px;
 	border-radius: 20px;
-	background-color: rgb(177, 198, 255);
+	background-color: rgb(46, 50, 52);
 	padding: 10px;
 	position: relative;
 }
@@ -218,7 +221,7 @@ border-radius: 0 0 15px 15px !important;
 	margin-bottom: auto;
 	margin-right: 10px;
 	border-radius: 20px;
-	background-color: #a4f6f7;
+	background-color: rgb(9, 100, 101);
 	padding: 10px;
 	position: relative;
 }
@@ -275,8 +278,37 @@ border-radius: 0 0 15px 15px !important;
 	cursor: pointer;
 	background-color: rgba(245, 152, 152, 0.2);
 }
-@media(max-width: 576px){
-	.contacts_card{
-	margin-bottom: 15px !important;
+
+.card {
+    height: 90vh; /* Cambia la altura fija por una relativa */
+    max-height: 700px; /* Mantén una altura máxima */
+    width: 100%; /* Asegúrate de que ocupe todo el ancho disponible */
+    max-width: 800px; /* Establece un ancho máximo */
+    margin: 0 auto; /* Centra la tarjeta */
 }
+
+#messageArea {
+    flex-wrap: nowrap;
+}
+
+#text {
+    flex-grow: 1;
+}
+
+.send_btn {
+    min-width: 50px;
+}
+
+
+@media (max-width: 576px) {
+    .user_info span {
+        font-size: 16px;
+    }
+    .user_info p {
+        font-size: 9px;
+    }
+    .msg_cotainer, .msg_cotainer_send {
+        padding: 8px;
+        font-size: 14px;
+    }
 }
