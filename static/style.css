@@ -122,7 +122,7 @@ border-radius: 0 0 15px 15px !important;
 	
 }
 .send_btn:hover {
-    background-color: hsl(183, 72%, 72%);
+  background-color: rgb(15, 224, 228);
 	transform: scale(1.05);
 }
 .input-group-text{
