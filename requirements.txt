@@ -1,4 +1,5 @@
 gunicorn
+pydantic
 Flask==3.0.3
 numpy==1.26.4
 spacy
