@@ -5,7 +5,7 @@ import pickle
 import numpy as np
 import spacy
 import unidecode  # Para quitar las tildes
-from keras.models import load_model
+from keras.models import load_model # type: ignore
 import re  # Para expresiones regulares
 
 app = Flask(__name__)
@@ -92,5 +92,5 @@ def chat():
     return jsonify({'response': response})
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
 #el puerto puede cambiar, recomendable 5000
