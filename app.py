@@ -92,5 +92,5 @@ def chat():
     return jsonify({'response': response})
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
 #el puerto puede cambiar, recomendable 5000
