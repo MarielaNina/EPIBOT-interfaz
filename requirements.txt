@@ -70,4 +70,5 @@ weasel==0.4.1
 Werkzeug==3.0.3
 wheel==0.43.0
 wrapt==1.16.0
+keras.models
 gunicorn
