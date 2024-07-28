@@ -5,15 +5,13 @@ import pickle
 import numpy as np
 import spacy
 import unidecode
-from keras.models import load_model
+from tensorflow.keras.models import load_model
 import re
 import logging
 
 app = Flask(__name__)
 
 # Configuración del logging
-logging.basicConfig(filename='error.log', level=logging.ERROR)
-
 # Cargar recursos una sola vez al inicio
 try:
     nlp = spacy.load('es_core_news_sm')
@@ -46,7 +44,7 @@ def bag_of_words(sentence):
             bag[words.index(w)] = 1
     return np.array(bag)
 
-def predict_class(sentence, threshold=0.5):
+def predict_class(sentence, threshold=0.3):
     bow = bag_of_words(sentence)
     res = model.predict(np.array([bow]))[0]
     max_index = np.argmax(res)
@@ -90,4 +88,10 @@ def chat():
     return jsonify({'response': response})
 
 if __name__ == '__main__':
-    app.run(debug=False)  # Cambiado a False para producción
+    app.run(debug=True,port=5001)  # Cambiado a False para producción
+
+
+
+
+
+
